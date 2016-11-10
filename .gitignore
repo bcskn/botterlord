@@ -1,0 +1,16 @@
+#Compiled python files
+botmap.pyc
+main.pyc
+create_db.pyc
+world.pyc
+npc.pyc
+cmd.pyc
+path.pyc
+ymlr.pyc
+
+
+#Icons
+Botter_logo.ico
+
+#Tools
+_commandline.bat
