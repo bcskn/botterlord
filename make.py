@@ -1,7 +1,5 @@
 import os
 import sqlite3
-import botmap
-import world
 
 
 def remv_file(filename):
@@ -42,7 +40,8 @@ try:
     ;''')
 except:
     print "Node table <NPCS> already exists."
-
+import botmap
+import world
 
 botmap.map_scan()
 world.add_ncolumn('NODES', 'ADVE', 'TEXT', 'None')
