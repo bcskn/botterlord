@@ -1,0 +1,6 @@
+{
+  "name": "Botterlord",
+  "tagline": "A story about programming; in a game about programming; made by a programmer.",
+  "body": "**#-BotterLord-**\r\n'''\r\nMy personal side project that is inspired by TIS-100, Lorenmud and Overlord. \r\nIt's in a simple MUD like style that relies on text and ASCII maps.\r\nThis is a programming game where you need to program your minions to win encounters with the monsters of the land.\r\n'''\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
