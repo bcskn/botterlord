@@ -11,4 +11,12 @@ bot_BotTest1:
   energy: 100
   health: 100
   loc: '10:44'
+bot_what:
+  energy: 100
+  health: 100
+  loc: '10:44'
+bot_whatap:
+  energy: 100
+  health: 100
+  loc: '10:44'
 world_name: name

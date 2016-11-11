@@ -10,12 +10,12 @@ import cmd
 import botmap
 import world
 import npc
-import path
 import ymlr
 import tools
+import path
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
-'''------------Interface Settings--------------'''
+'''------------Values--------------'''
 '''/Hardcoded/'''
 topbar_name = 'BotterLord DEV Version'
 icon_name = 'Botter_logo.ico'  # Icon must be in .ico format.
@@ -29,6 +29,9 @@ map_font_size = 13
 bot_font_size = 15
 map_width = 64
 map_height = 20
+default_hp = 100
+default_mp = 100
+default_loc = '10:44'
 
 '''------Get Icon Location------'''
 _icon_path = path.get_path(icon_name)
@@ -45,6 +48,9 @@ fs_var = 0 #Fullscreen state
 pc_name = ''
 pc_row = 10
 pc_col = 40
+real_input = ''
+real_parsed = ''
+
 
 started = False #In title screen
 waiting_value = False
@@ -91,7 +97,6 @@ bot_field = Text(bot_frame,bg = "Black", fg="White",relief=FLAT)
 map_field = Text(map_frame,bg = "Black", fg="White",relief=FLAT)
 textentry = Entry(root, bg = "Black", fg = "White", relief=FLAT)
 scrollbar = Scrollbar(root, bg = "Black", relief=FLAT)
-
 map_frame.grid(row=1, column=1, sticky=W+E+N+S)
 bot_frame.grid(row=0, column=1, sticky=W+E+N+S, pady=(8,8))
 map_frame.grid_propagate(False)
@@ -111,7 +116,8 @@ textentry.config(insertbackground="White")
 
 root.grid_rowconfigure(0, weight=1)
 root.grid_columnconfigure(0, weight=1)
-root.grid_propagate(False)
+root.grid_propagate(False) # New commentds
+
 
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
@@ -178,16 +184,17 @@ class Bot:
         self.energy = mp
         self.location = loc
         botinfo = {'health': self.health, 'energy': self.energy, 'loc': self.location}
-        namebot = 'bot_' + self.botname
+        namebot = 'bot_' + self.botname #Bot tag in the front of the yaml elements.
         ymlr.enter_data(namebot, botinfo)
 
-def create_bot(_name):
-    bots[_name] = _name
-    bots[_name] = Bot(_name, 100, 100, '10:44')
-    str_bot = "\n►[ ID: %s | HP: %d | MP: %d | LOC: %s ]" %(bots[_name].botname,
-    bots[_name].health , bots[_name].energy ,bots[_name].location)
-    print str_bot
-    bot_field.insert(END, str_bot)
+def create_bot(namebot, hp = default_hp, mp = default_mp, loc = default_loc):
+    try : exists_ = ymlr.get_data('bot_' + namebot) # Check if bot exists in yaml file.
+    except :
+        bots[namebot] = Bot(namebot, hp, mp, loc)
+        str_bot = "\n►[ ID: %s | HP: %d | MP: %d | LOC: %s ]" %(bots[namebot].botname,
+        bots[namebot].health , bots[namebot].energy ,bots[namebot].location) # Print bot stats in the bot_field.
+        print str_bot
+        bot_field.insert(END, str_bot)
 
 def enterpressed(event):
     """Get input from text entry when Enter(return) is pressed and delete the previous text."""
@@ -200,7 +207,11 @@ def enterpressed(event):
     global waiting_value
     global name_entered
     global last_input
+    global real_input
+    global real_parsed
     if waiting_value == False:
+        real_input = userinput
+        real_parsed = real_input.split(' ')
         userinput = userinput.lower()
         if userinput != '':
             try_execute_command(userinput)
@@ -249,9 +260,8 @@ def try_execute_command(userinput0):
 
     else: #Execute command
         if legal_command == 'create' and parsing[1] == 'bot':
-            try : create_bot(parsing[2])
-            except :
-                text_field.insert(END, 'Error creating bot.')
+            global real_parsed
+            create_bot(real_parsed[2]) #----------------->Change
 
         if (legal_command == 'north' or legal_command == 'south'
         or legal_command == 'east' or legal_command == 'west') :
