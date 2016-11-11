@@ -34,7 +34,6 @@ default_hp = 100
 default_mp = 100
 default_loc = '10:44'
 
-
 '''------Get Icon Location------'''
 _icon_path = path.get_path(icon_name)
 
@@ -167,7 +166,7 @@ def _start_1():
     draw_map(pc_row, pc_col)
 
 
-def _load_(): # Doesn't support bot system
+    """Choose already existing yml file to set as profile_name."""
     global started, pc_row, pc_col
     _loc = ymlr.load_data('profile.yml', 'location', profile_name)
     _loc = tools.parse_str_loc(_loc)
