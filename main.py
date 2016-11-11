@@ -29,9 +29,11 @@ map_font_size = 13
 bot_font_size = 15
 map_width = 64
 map_height = 20
+#----------------------------------------------
 default_hp = 100
 default_mp = 100
 default_loc = '10:44'
+
 
 '''------Get Icon Location------'''
 _icon_path = path.get_path(icon_name)
@@ -50,8 +52,8 @@ pc_row = 10
 pc_col = 40
 real_input = ''
 real_parsed = ''
-
-
+#---------------------------------------------
+profile_name = '' # Loaded profile file and world name
 started = False #In title screen
 waiting_value = False
 name_entered = False
@@ -116,7 +118,7 @@ textentry.config(insertbackground="White")
 
 root.grid_rowconfigure(0, weight=1)
 root.grid_columnconfigure(0, weight=1)
-root.grid_propagate(False) # New commentds
+root.grid_propagate(False)
 
 
 #-------------------------------------------------------------------------------
@@ -156,7 +158,8 @@ def _start_1():
     intro_story = """\n\
     \nWorld name: %s \
     \n<PLACE HOLDER TEXT> \
-    """%(ymlr.get_data('world_name'))
+    """%(profile_name)
+
     text_field.insert(END, intro_story)
 
     print 'start sequence 1' #Debug msg
@@ -166,7 +169,7 @@ def _start_1():
 
 def _load_(): # Doesn't support bot system
     global started, pc_row, pc_col
-    _loc = ymlr.load_data('profile.yml', 'location')
+    _loc = ymlr.load_data('profile.yml', 'location', profile_name)
     _loc = tools.parse_str_loc(_loc)
     _loc0 = int(_loc[0]); _loc1 = int(_loc[1])
     pc_row = _loc0; pc_col = _loc1
@@ -184,11 +187,12 @@ class Bot:
         self.energy = mp
         self.location = loc
         botinfo = {'health': self.health, 'energy': self.energy, 'loc': self.location}
-        namebot = 'bot_' + self.botname #Bot tag in the front of the yaml elements.
-        ymlr.enter_data(namebot, botinfo)
+        namebot = 'bot_' + self.botname # Bot tag in the front of the yaml elements.
+        global profile_name
+        ymlr.enter_data(namebot, botinfo, profile_name)
 
 def create_bot(namebot, hp = default_hp, mp = default_mp, loc = default_loc):
-    try : exists_ = ymlr.get_data('bot_' + namebot) # Check if bot exists in yaml file.
+    try : exists_ = ymlr.get_data('bot_' + namebot, profile_name) # Check if bot exists in yaml file.
     except :
         bots[namebot] = Bot(namebot, hp, mp, loc)
         str_bot = "\n►[ ID: %s | HP: %d | MP: %d | LOC: %s ]" %(bots[namebot].botname,
@@ -221,17 +225,22 @@ def enterpressed(event):
         parsing = parsing.split(' ')
         if parsing[0] != '': #-----------If it's not empty.
             if name_entered == False:
-                enter_worldname(userinput)
+                setup_world(userinput) # Setup a new world
                 waiting_value = False
     text_field.see('end') #---------------Autoscroll down
     print '>>', userinput #Debug
 
-def enter_worldname(_input):
+def setup_world(_input): # CREATE NEW WORLD, FILE NAME == WORLD NAME
     '''User is in the setting up stages and havent entered world name yet.'''
-    ymlr.enter_data('world_name', _input)
+    global profile_name, name_entered, waiting_value
+    profile_name = _input + '.yml'
+    _path = path.get_path(_input)
+    world_yml = open(_path , 'w+') #--Open if profile exists; create if not
+    #ymlr.enter_data('world_name', _input, profile_name)
     name_entered = True
     waiting_value = False
     _start_1()
+
 
 def get_last_input(event):
     global last_input
@@ -292,7 +301,7 @@ def draw_map(p_row, p_col):
     for cur_row in range(start_row, end_row):
         for cur_col in range(start_col, end_col, 4):
             if cur_row == p_row and cur_col == p_col:
-                map_field.insert(END, bot_avatar) #------------><OO>
+                map_field.insert(END, bot_avatar) #------------>Hardcoded <OO>
             else:
                 map_field.insert(END, botmap.node(cur_row, cur_col))
         map_field.insert(END, '\n')
@@ -333,8 +342,6 @@ text_field.insert(END, entry_message)
 
 #root.after(5000,draw_map, 10, 40)
 #Debug Testing
-create_bot("BotTest")
-create_bot("BotTest1")
 
 #-------------------------------------------------------------------------------
 root.mainloop() #Gui Programs need a loop to stay on the screen.
