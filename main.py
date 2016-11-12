@@ -166,6 +166,7 @@ def _start_1():
     draw_map(pc_row, pc_col)
 
 
+def _load_(): #----------------------------------> Needs an update.
     """Choose already existing yml file to set as profile_name."""
     global started, pc_row, pc_col
     _loc = ymlr.load_data('profile.yml', 'location', profile_name)
@@ -180,14 +181,15 @@ def _quit_():
     root.quit()
 
 class Bot:
-    def __init__(self, namebot, hp, mp, loc):
+    def __init__(self, namebot, hp, mp, loc): # ERROR !
+        global profile_name
         self.botname = namebot
         self.health = hp
         self.energy = mp
         self.location = loc
-        botinfo = {'health': self.health, 'energy': self.energy, 'loc': self.location}
         namebot = 'bot_' + self.botname # Bot tag in the front of the yaml elements.
-        global profile_name
+        botinfo = {'health': self.health, 'energy': self.energy, 'loc': self.location}
+        print namebot,',', botinfo,',', profile_name, '<------Is there a non type ?' # DBG MSG
         ymlr.enter_data(namebot, botinfo, profile_name)
 
 def create_bot(namebot, hp = default_hp, mp = default_mp, loc = default_loc):
@@ -233,7 +235,9 @@ def setup_world(_input): # CREATE NEW WORLD, FILE NAME == WORLD NAME
     '''User is in the setting up stages and havent entered world name yet.'''
     global profile_name, name_entered, waiting_value
     profile_name = _input + '.yml'
-    _path = path.get_path(_input)
+    print profile_name, '<-Profile name'
+    _path = path.get_path(profile_name)
+    print _path, '<-Path'
     world_yml = open(_path , 'w+') #--Open if profile exists; create if not
     #ymlr.enter_data('world_name', _input, profile_name)
     name_entered = True
