@@ -239,7 +239,8 @@ def setup_world(_input): # CREATE NEW WORLD, FILE NAME == WORLD NAME
     _path = path.get_path(profile_name)
     print _path, '<-Path'
     world_yml = open(_path , 'w+') #--Open if profile exists; create if not
-    #ymlr.enter_data('world_name', _input, profile_name)
+    yml_info = {'world_name':_input}
+    ymlr.insert(yml_info, profile_name)
     name_entered = True
     waiting_value = False
     _start_1()
