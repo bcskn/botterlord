@@ -3,8 +3,8 @@
 Set movement points similar to LorenMud
 Event Schedule !
 Create <help> command to list known commands.
-Save and load system.
-Bot control switching.
+Load system.
+Bot control switching. <------------------------- Priority
 It's like having lots of alts in the game.
 
 Store bots in YAML.

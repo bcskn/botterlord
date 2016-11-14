@@ -245,7 +245,6 @@ def setup_world(_input): # CREATE NEW WORLD, FILE NAME == WORLD NAME
     waiting_value = False
     _start_1()
 
-
 def get_last_input(event):
     global last_input
     textentry.insert(END, last_input)
@@ -277,7 +276,7 @@ def try_execute_command(userinput0):
             create_bot(real_parsed[2]) #----------------->Change
 
         if (legal_command == 'north' or legal_command == 'south'
-        or legal_command == 'east' or legal_command == 'west') :
+        or legal_command == 'east' or legal_command == 'west'):
             mov_pc(legal_command)
 
         if legal_command == 'start': _start_0()

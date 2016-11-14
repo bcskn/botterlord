@@ -34,12 +34,12 @@ SOFTWARE.
 
 .pl-e /* entity */,
 .pl-en /* entity.name */ {
-  color: #795da3;
+  color: #000;
 }
 
 .pl-smi /* variable.parameter.function, storage.modifier.package, storage.modifier.import, storage.type.java, variable.other */,
 .pl-s .pl-s1 /* string source */ {
-  color: #333;
+  color: #000;
 }
 
 .pl-ent /* entity.name.tag */ {
@@ -57,7 +57,7 @@ SOFTWARE.
 .pl-sr .pl-cce /* string.regexp constant.character.escape */,
 .pl-sr .pl-sre /* string.regexp source.ruby.embedded */,
 .pl-sr .pl-sra /* string.regexp string.regexp.arbitrary-repitition */ {
-  color: #183691;
+  color: #000;
 }
 
 .pl-v /* variable */ {
@@ -121,4 +121,3 @@ SOFTWARE.
 .pl-mo /* meta.output */ {
   color: #1d3e81;
 }
-
