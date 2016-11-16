@@ -1,0 +1,5 @@
+bot_botTest1:
+  energy: 100
+  health: 100
+  loc: '10:44'
+world_name: worldTest1

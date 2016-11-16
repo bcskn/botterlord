@@ -35,7 +35,7 @@ default_mp = 100
 default_loc = '10:44'
 
 '''------Get Icon Location------'''
-_icon_path = path.get_path(icon_name)
+_icon_path = path.get_path() + 'images\\' + icon_name # Retrieve image from images folder.
 
 '''-----Connect to the Database-----'''
 conn = sqlite3.connect('botterlord.db')
@@ -168,14 +168,7 @@ def _start_1():
 
 def _load_(): #----------------------------------> Needs an update.
     """Choose already existing yml file to set as profile_name."""
-    global started, pc_row, pc_col
-    _loc = ymlr.load_data('profile.yml', 'location', profile_name)
-    _loc = tools.parse_str_loc(_loc)
-    _loc0 = int(_loc[0]); _loc1 = int(_loc[1])
-    pc_row = _loc0; pc_col = _loc1
-    draw_map(_loc0, _loc1)
-    started = True
-    print 'load sequence', _loc[0], _loc[1], type(_loc) #Debug msg
+    pass
 
 def _quit_():
     root.quit()
