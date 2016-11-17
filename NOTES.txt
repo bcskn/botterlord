@@ -1,9 +1,19 @@
 ///// DRY + ORTHOGONAL SYSTEMS + Prefer human readable formats
 
+Start
+create a bot
+switch control to it
+when switched control draw map on it's location.
+
+draw_map(addr = None):
+  if addr = None:
+    addr = controlled_bot[addr]
+
 Set movement points similar to LorenMud
 Event Schedule !
 Create <help> command to list known commands.
 Load system.
+Save # <------------------------------After using the command to save write all information in yaml.
 Bot control switching. <------------------------- Priority
 It's like having lots of alts in the game.
 

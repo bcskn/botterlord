@@ -5,7 +5,8 @@ import path
 
 map_name = 'worldmap.txt'
 
-_map_path = path.get_path(map_name)
+_map_path = path.get_path()
+_map_path = _map_path + 'data\\' + map_name 
 map = open(_map_path)
 map = map.read()
 map_rows = map.split() #Split the map into lines

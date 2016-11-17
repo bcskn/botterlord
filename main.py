@@ -42,17 +42,21 @@ conn = sqlite3.connect('botterlord.db')
 db = conn.cursor()
 
 '''-----Variables-----'''
-bots = {}
-bot_avatar = '<OO>'
 start = 1.0 #Start Line
 fs_var = 0 #Fullscreen state
-pc_name = ''
-pc_row = 10
-pc_col = 40
 real_input = ''
 real_parsed = ''
-#---------------------------------------------
+
+'''----- Variables stored in profile (yaml) file-----'''
+world_file = ''
 profile_name = '' # Loaded profile file and world name
+bots = {}
+bot_avatar = '<OO>'
+pc_name = '' #Bot being controlled.
+pc_row = 10
+pc_col = 40
+
+#---------------------------------------------
 started = False #In title screen
 waiting_value = False
 name_entered = False
@@ -170,23 +174,30 @@ def _load_(): #----------------------------------> Needs an update.
     """Choose already existing yml file to set as profile_name."""
     pass
 
+def save_state():
+    print 'func: Save state'
+    pass #--------------------------- Load data into profile yml file
+    #ymlr.enter_data('')
+    root.after(1000, save_state)
+root.after(1000, save_state) # Initiate save loop
+
 def _quit_():
     root.quit()
 
 class Bot:
-    def __init__(self, namebot, hp, mp, loc): # ERROR !
-        global profile_name
+    def __init__(self, namebot, hp, mp, loc):
+        global profile_name, world_file
         self.botname = namebot
         self.health = hp
         self.energy = mp
         self.location = loc
         namebot = 'bot_' + self.botname # Bot tag in the front of the yaml elements.
         botinfo = {'health': self.health, 'energy': self.energy, 'loc': self.location}
-        print namebot,',', botinfo,',', profile_name, '<------Is there a non type ?' # DBG MSG
-        ymlr.enter_data(namebot, botinfo, profile_name)
+        print namebot,',', botinfo,',', profile_name
+        ymlr.enter_data(namebot, botinfo, world_file)
 
 def create_bot(namebot, hp = default_hp, mp = default_mp, loc = default_loc):
-    try : exists_ = ymlr.get_data('bot_' + namebot, profile_name) # Check if bot exists in yaml file.
+    try : exists_ = ymlr.get_data('bot_' + namebot, world_file) # Check if bot exists in yaml file.
     except :
         bots[namebot] = Bot(namebot, hp, mp, loc)
         str_bot = "\n►[ ID: %s | HP: %d | MP: %d | LOC: %s ]" %(bots[namebot].botname,
@@ -202,11 +213,7 @@ def enterpressed(event):
     text_field.update()
     textentry.delete(0, END)
 
-    global waiting_value
-    global name_entered
-    global last_input
-    global real_input
-    global real_parsed
+    global waiting_value, name_entered, last_input, real_input, real_parsed
     if waiting_value == False:
         real_input = userinput
         real_parsed = real_input.split(' ')
@@ -226,19 +233,22 @@ def enterpressed(event):
 
 def setup_world(_input): # CREATE NEW WORLD, FILE NAME == WORLD NAME
     '''User is in the setting up stages and havent entered world name yet.'''
-    global profile_name, name_entered, waiting_value
+    global profile_name, name_entered, waiting_value, world_file
     profile_name = _input + '.yml'
     print profile_name, '<-Profile name'
-    _path = path.get_path(profile_name)
+    _path = path.get_path()
+    _path = _path + 'worlds\\' + profile_name
     print _path, '<-Path'
-    world_yml = open(_path , 'w+') #--Open if profile exists; create if not
+    world_file = _path # Set world_file as full location of the file
+    world_yml = open(world_file , 'w+') #--Open if profile exists; create if not
     yml_info = {'world_name':_input}
-    ymlr.insert(yml_info, profile_name)
+    ymlr.insert(yml_info, world_file)
     name_entered = True
     waiting_value = False
     _start_1()
 
 def get_last_input(event):
+    """Re-enter last returned command into textentry."""
     global last_input
     textentry.insert(END, last_input)
 
@@ -287,6 +297,7 @@ def mov_pc(_direction):
 
 def draw_map(p_row, p_col):
     """Go through the nodes around the given coordinates."""
+
     map_field.delete(1.0, END) #  Clean the map field before writing.
     prnt_mainfeed(p_row, p_col) #  Print the standed node's information
     start_row = p_row-(map_height/2)
