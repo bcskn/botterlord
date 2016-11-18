@@ -252,6 +252,12 @@ def get_last_input(event):
     global last_input
     textentry.insert(END, last_input)
 
+def switch_bot(switch_to):
+    global pc_row, pc_col, pc_name
+    if cur_pc == None:
+        pass
+    #pc_row = ymlr.get_data()
+
 def try_execute_command(userinput0):
     """Parse and execute entered command."""
     parsing = userinput0

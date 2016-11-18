@@ -5,9 +5,6 @@ create a bot
 switch control to it
 when switched control draw map on it's location.
 
-draw_map(addr = None):
-  if addr = None:
-    addr = controlled_bot[addr]
 
 Set movement points similar to LorenMud
 Event Schedule !
