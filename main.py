@@ -175,7 +175,7 @@ def _load_(): #----------------------------------> Needs an update.
     pass
 
 def save_state():
-    print 'func: Save state'
+    #print 'func: Save state'
     pass #--------------------------- Load data into profile yml file
     #ymlr.enter_data('')
     root.after(1000, save_state)
@@ -253,10 +253,10 @@ def get_last_input(event):
     textentry.insert(END, last_input)
 
 def switch_bot(switch_to):
-    global pc_row, pc_col, pc_name
-    if cur_pc == None:
-        pass
-    #pc_row = ymlr.get_data()
+    global pc_row, pc_col, pc_name, world_file
+    botname = 'bot_' + switch_to
+    bot_data = ymlr.get_data(botname, world_file)
+    print 'func: switch_bot, bot_data print ->', bot_data
 
 def try_execute_command(userinput0):
     """Parse and execute entered command."""
@@ -291,6 +291,8 @@ def try_execute_command(userinput0):
         if legal_command == 'start': _start_0()
         if legal_command == 'load': _load_()
         if legal_command == 'quit': _quit_()
+
+        if legal_command == 'control': switch_bot(parsing[1])
 
 def mov_pc(_direction):
     """Relocate player/bot location based on given direction."""
@@ -353,8 +355,10 @@ textentry.focus_force()
 text_field.insert(END, botter_title)
 text_field.insert(END, entry_message)
 
-#root.after(5000,draw_map, 10, 40)
-#Debug Testing
+
+'''Tests'''
+setup_world('profile')
+create_bot('testBot')
 
 #-------------------------------------------------------------------------------
 root.mainloop() #Gui Programs need a loop to stay on the screen.

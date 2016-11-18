@@ -1,5 +1,5 @@
 '''Command Space and Parsing'''
-pc_commands = ['start', 'load', 'quit', 'create', 'set', 'north', 'east', 'west', 'south']
+pc_commands = ['start', 'load', 'quit', 'create', 'set', 'north', 'east', 'west', 'south', 'control']
 admin_commands = []
 
 def find_command(string, allowed_commands=None):
