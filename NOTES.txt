@@ -1,9 +1,10 @@
 ///// DRY + ORTHOGONAL SYSTEMS + Prefer human readable formats
 
-Start
-create a bot
-switch control to it
-when switched control draw map on it's location.
+check existing profiles.
+if already exist with a same name print error message.
+load function prints out existing bots too.
+RWBY RWBY
+
 
 
 Set movement points similar to LorenMud
