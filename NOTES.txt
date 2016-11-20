@@ -3,7 +3,7 @@
 check existing profiles.
 if already exist with a same name print error message.
 load function prints out existing bots too.
-RWBY
+RWBY rwby
 
 
 
