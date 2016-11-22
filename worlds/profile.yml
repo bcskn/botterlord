@@ -1,5 +1,13 @@
-bot_testBot:
+bot_testbot0:
   energy: 100
   health: 100
-  loc: '10:44'
+  loc: '9:48'
+bot_testbot1:
+  energy: 100
+  health: 100
+  loc: '11:44'
+bot_testbot2:
+  energy: 100
+  health: 100
+  loc: '12:48'
 world_name: profile

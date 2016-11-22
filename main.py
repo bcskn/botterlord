@@ -51,8 +51,9 @@ real_parsed = ''
 world_file = ''
 profile_name = '' # Loaded profile file and world name
 bots = {}
-bot_avatar = '<OO>'
-pc_name = '' #Bot being controlled.
+bot_avatar = '<OO>' # Controlled bot sign
+np_bot_avatar = '<oo>' # Uncontrolled bot sign
+pc_name = '' # Name of the bot being controlled.
 pc_row = 10
 pc_col = 40
 
@@ -256,7 +257,11 @@ def switch_bot(switch_to):
     global pc_row, pc_col, pc_name, world_file
     botname = 'bot_' + switch_to
     bot_data = ymlr.get_data(botname, world_file)
-    print 'func: switch_bot, bot_data print ->', bot_data
+    parse_loc = tools.parse_str_loc(bot_data['loc'])
+    pc_row = parse_loc[0]; pc_col = parse_loc[1]
+    pc_row = int(pc_row); pc_col = int(pc_col)
+    draw_map(pc_row, pc_col)
+    print 'func: switch_bot, bot_data print ->',pc_row, pc_col , bot_data
 
 def try_execute_command(userinput0):
     """Parse and execute entered command."""
@@ -305,7 +310,7 @@ def mov_pc(_direction):
 
 def draw_map(p_row, p_col):
     """Go through the nodes around the given coordinates."""
-
+    global world_file, bot_avatar, np_bot_avatar
     map_field.delete(1.0, END) #  Clean the map field before writing.
     prnt_mainfeed(p_row, p_col) #  Print the standed node's information
     start_row = p_row-(map_height/2)
@@ -313,12 +318,32 @@ def draw_map(p_row, p_col):
     end_row = p_row+(map_height/2)+1
     end_col= p_col+(map_width/2)+1
 
+    stream = open(world_file, 'r')
+    profile = yaml.load(stream) # Player information is stored here.
+
     for cur_row in range(start_row, end_row):
         for cur_col in range(start_col, end_col, 4):
-            if cur_row == p_row and cur_col == p_col:
-                map_field.insert(END, bot_avatar) #------------>Hardcoded <OO>
+            bot_exists = False; pc_exists = False
+
+            for bot_key in profile:
+                if 'loc' in profile[bot_key]:
+                    addr = tools.parse_str_loc(profile[bot_key]['loc'])
+                    chkd_row = int(addr[0]); chkd_col = int(addr[1])
+                    if chkd_row == cur_row and chkd_col == cur_col:
+                            bot_exists = True
+                    else: bot_exists = False
+
+            if cur_row == p_row and cur_col == p_col: pc_exists = True
+            else: pc_exists = False
+
+            if pc_exists == True: map_field.insert(END, bot_avatar)
+
             else:
-                map_field.insert(END, botmap.node(cur_row, cur_col))
+                if bot_exists == True:
+                    map_field.insert(END, np_bot_avatar)
+                else:
+                    bot_exists = False
+                    map_field.insert(END, botmap.node(cur_row, cur_col))
         map_field.insert(END, '\n')
 
 def prnt_mainfeed(p_row, p_col):
@@ -358,7 +383,9 @@ text_field.insert(END, entry_message)
 
 '''Tests'''
 setup_world('profile')
-create_bot('testBot')
+create_bot('testbot0', 100, 100, '9:48')
+create_bot('testbot1', 100, 100, '11:44')
+create_bot('testbot2', 100, 100, '12:48')
 
 #-------------------------------------------------------------------------------
 root.mainloop() #Gui Programs need a loop to stay on the screen.

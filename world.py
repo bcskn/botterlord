@@ -1,5 +1,8 @@
 """File for setting up adventures and information in nodes."""
 import sqlite3
+import yaml
+import tools
+
 
 def add_ncolumn(tab_name, col_name, col_type, df_val): # Items, exits columns are also needed.
     """Add a new column with default value."""
@@ -35,3 +38,17 @@ def get_node(_addr_):
     return db.fetchone()
     conn.commit()
     conn.close()
+
+def chck_bot_exist(np_row, np_col, world_file): # No errors
+    """Check if there is a bot in given coordinates stored inside the world file."""
+    with open(world_file, 'r') as stream:
+        profile = yaml.load(stream)
+        for bot_key in profile:
+            if 'loc' in profile[bot_key]:
+                print 'loc in bot_key = True', profile[bot_key]
+                addr = tools.parse_str_loc(profile[bot_key]['loc'])
+                chkd_row = int(addr[0]); chkd_col = int(addr[1])
+                if np_row == chkd_row and np_col == chkd_col:
+                    return True
+                else:
+                    return False
