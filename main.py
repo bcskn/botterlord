@@ -318,33 +318,25 @@ def draw_map(p_row, p_col):
     end_row = p_row+(map_height/2)+1
     end_col= p_col+(map_width/2)+1
 
-    stream = open(world_file, 'r')
-    profile = yaml.load(stream) # Player information is stored here.
-
     for cur_row in range(start_row, end_row):
         for cur_col in range(start_col, end_col, 4):
-            bot_exists = False; pc_exists = False
-
-            for bot_key in profile:
-                if 'loc' in profile[bot_key]:
-                    addr = tools.parse_str_loc(profile[bot_key]['loc'])
-                    chkd_row = int(addr[0]); chkd_col = int(addr[1])
-                    if chkd_row == cur_row and chkd_col == cur_col:
-                            bot_exists = True
-                    else: bot_exists = False
-
-            if cur_row == p_row and cur_col == p_col: pc_exists = True
-            else: pc_exists = False
-
-            if pc_exists == True: map_field.insert(END, bot_avatar)
-
+            bot_exists = False
+            if cur_row == p_row and cur_col == p_col: # pc exists
+                map_field.insert(END, bot_avatar)
             else:
-                if bot_exists == True:
-                    map_field.insert(END, np_bot_avatar)
-                else:
-                    bot_exists = False
-                    map_field.insert(END, botmap.node(cur_row, cur_col))
+                map_field.insert(END, botmap.node(cur_row, cur_col))
         map_field.insert(END, '\n')
+
+def show_bots(): # DEAD
+    stream = open(world_file, 'r')
+    profile = yaml.load(stream) # Player information is stored here.
+    for bot_key in profile:
+        chkd_row = 0; chkd_col = 0
+        if 'loc' in profile[bot_key]:
+            addr = tools.parse_str_loc(profile[bot_key]['loc'])
+            chkd_row = int(addr[0]); chkd_col = int(addr[1])
+    map_field.delete(bot_loc, bot_loc + 0.4) # y.x
+    pass
 
 def prnt_mainfeed(p_row, p_col):
     """Inserts the node-state text to the main feed."""

@@ -1,11 +1,23 @@
 ///// DRY + ORTHOGONAL SYSTEMS + Prefer human readable formats
+If there is a bot placed here insert np bot avatar.
+else:
+          for bot_key in profile:
+              chkd_row = 0; chkd_col = 0
+              if 'loc' in profile[bot_key]:
+                  addr = tools.parse_str_loc(profile[bot_key]['loc'])
+                  chkd_row = int(addr[0]); chkd_col = int(addr[1])
+                  if chkd_row == cur_row and chkd_col == cur_col:
+                      bot_exists = True
+                      print 'BOT EXISTS !!!'
+                  else:
+                      bot_exists = False
+                      print 'DOESNT EXIST'
+              if bot_exists == True:
+                  map_field.insert(END, np_bot_avatar)
 
 check existing profiles.
 if already exist with a same name print error message.
 load function prints out existing bots too.
-RWBY rwby rwby
-
-
 
 Set movement points similar to LorenMud
 Event Schedule !
