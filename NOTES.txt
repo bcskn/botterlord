@@ -15,6 +15,19 @@ else:
               if bot_exists == True:
                   map_field.insert(END, np_bot_avatar)
 
+
+
+
+                  for cur_row in range(start_row, end_row):
+                        for cur_col in range(start_col, end_col, 4):
+                            bot_exists = False
+                            if cur_row == p_row and cur_col == p_col: # pc exists
+                                map_field.insert(END, bot_avatar)
+                            else:
+                                map_field.insert(END, botmap.node(cur_row, cur_col))
+                        map_field.insert(END, '\n')
+
+
 check existing profiles.
 if already exist with a same name print error message.
 load function prints out existing bots too.

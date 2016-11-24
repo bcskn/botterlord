@@ -318,6 +318,9 @@ def draw_map(p_row, p_col):
     end_row = p_row+(map_height/2)+1
     end_col= p_col+(map_width/2)+1
 
+    stream = open(world_file, 'r')
+    profile = yaml.load(stream) # Player information is stored here.
+
     for cur_row in range(start_row, end_row):
         for cur_col in range(start_col, end_col, 4):
             bot_exists = False
@@ -328,8 +331,7 @@ def draw_map(p_row, p_col):
         map_field.insert(END, '\n')
 
 def show_bots(): # DEAD
-    stream = open(world_file, 'r')
-    profile = yaml.load(stream) # Player information is stored here.
+
     for bot_key in profile:
         chkd_row = 0; chkd_col = 0
         if 'loc' in profile[bot_key]:
