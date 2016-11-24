@@ -338,7 +338,7 @@ def show_bots(): # DEAD
             addr = tools.parse_str_loc(profile[bot_key]['loc'])
             chkd_row = int(addr[0]); chkd_col = int(addr[1])
     map_field.delete(bot_loc, bot_loc + 0.4) # y.x
-    pass
+    pass  # Did Nothing
 
 def prnt_mainfeed(p_row, p_col):
     """Inserts the node-state text to the main feed."""
