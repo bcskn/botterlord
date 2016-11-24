@@ -16,8 +16,6 @@ else:
                   map_field.insert(END, np_bot_avatar)
 
 
-
-
                   for cur_row in range(start_row, end_row):
                         for cur_col in range(start_col, end_col, 4):
                             bot_exists = False
