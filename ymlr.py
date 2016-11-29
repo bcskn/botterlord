@@ -13,7 +13,6 @@ def insert(data, filename):
 def enter_data(cont, valinput, filename): #Cont for container#profile.yml
     stream = open(filename, 'r')
     prof = yaml.load(stream) # Player information is stored here.
-    print prof
     prof[cont] = valinput
     with open(filename, 'w') as yaml_file:
         yaml_file.write(yaml.dump(prof, default_flow_style = False))

@@ -12,4 +12,3 @@ def get_path(filename = 'main.pt'):
 def parse_str_loc(strloc):
     strloc = strloc.split(':')
     return strloc[0], strloc[1]
-print get_path('main.py')

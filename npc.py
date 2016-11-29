@@ -41,5 +41,3 @@ class George:
 
 #Debug Area
 add_npc_db('10:40', 'George')
-print world.chcknode('10:40', 'NPC')
-print call_npc('george', 'greet')

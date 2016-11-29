@@ -46,6 +46,7 @@ start = 1.0 #Start Line
 fs_var = 0 #Fullscreen state
 real_input = ''
 real_parsed = ''
+bot_addresses = []
 
 '''----- Variables stored in profile (yaml) file-----'''
 world_file = ''
@@ -261,20 +262,20 @@ def switch_bot(switch_to):
     pc_row = parse_loc[0]; pc_col = parse_loc[1]
     pc_row = int(pc_row); pc_col = int(pc_col)
     draw_map(pc_row, pc_col)
-    print 'func: switch_bot, bot_data print ->',pc_row, pc_col , bot_data
+    print "printing >> switch_bot > pc_row, pc_col, bot_data:   ",pc_row, pc_col , bot_data
 
 def try_execute_command(userinput0):
     """Parse and execute entered command."""
     parsing = userinput0
     parsing = parsing.split(' ')
 
-    print parsing #Debug
+    print "printing >> try_execute_command > parsing:   ", parsing
 
     if started == False:
         """If the game is in the title screen"""
         menu_commands = ['start', 'load', 'quit']
         legal_command = cmd.find_command(parsing[0], menu_commands)
-        print legal_command
+        print "printing >> try_execute_command > legal_command:  ",legal_command # Track message
 
     else : legal_command = cmd.find_command(parsing[0])
 
@@ -310,7 +311,7 @@ def mov_pc(_direction):
 
 def draw_map(p_row, p_col):
     """Go through the nodes around the given coordinates."""
-    global world_file, bot_avatar, np_bot_avatar
+    global world_file, bot_addresses, bot_avatar, np_bot_avatar
     map_field.delete(1.0, END) #  Clean the map field before writing.
     prnt_mainfeed(p_row, p_col) #  Print the standed node's information
     start_row = p_row-(map_height/2)
@@ -318,27 +319,29 @@ def draw_map(p_row, p_col):
     end_row = p_row+(map_height/2)+1
     end_col= p_col+(map_width/2)+1
 
-    stream = open(world_file, 'r')
-    profile = yaml.load(stream) # Player information is stored here.
-
     for cur_row in range(start_row, end_row):
         for cur_col in range(start_col, end_col, 4):
-            bot_exists = False
+            addrs = "%d:%d"%(cur_row, cur_col) # Turn address into a single string
             if cur_row == p_row and cur_col == p_col: # pc exists
                 map_field.insert(END, bot_avatar)
             else:
-                map_field.insert(END, botmap.node(cur_row, cur_col))
+                if addrs in bot_addresses == True:
+                    map_field.insert(END, np_bot_avatar)
+                    print ">>>>>>>>>>>>>IT'S TRUE!!!"
+                else:
+                    map_field.insert(END, botmap.node(cur_row, cur_col))
         map_field.insert(END, '\n')
 
-def show_bots(): # DEAD
-
-    for bot_key in profile:
-        chkd_row = 0; chkd_col = 0
-        if 'loc' in profile[bot_key]:
-            addr = tools.parse_str_loc(profile[bot_key]['loc'])
-            chkd_row = int(addr[0]); chkd_col = int(addr[1])
-    map_field.delete(bot_loc, bot_loc + 0.4) # y.x
-    pass  # Did Nothing
+def store_bot_location(filename):
+    stream = open(filename, 'r')
+    prof = yaml.load(stream) # Player information is stored here.
+    bot_locations = []
+    for botkey in prof:
+        if botkey.startswith('bot_') == False:
+            continue
+        else:
+            bot_locations.append(prof[botkey]['loc'])
+    ymlr.enter_data('locations', bot_locations, filename)
 
 def prnt_mainfeed(p_row, p_col):
     """Inserts the node-state text to the main feed."""
@@ -346,7 +349,7 @@ def prnt_mainfeed(p_row, p_col):
     envo_node = botmap.recog_node(_addr)
     npc_node = world.chcknode(_addr, 'NPC')
     adven_node = world.chcknode(_addr, 'ADVE')
-    print npc_node
+    print "printing >> prnt_mainfeed, npc_node:  ", npc_node # Track message
     if npc_node == 'None': npc_node = 'No one'
     if adven_node == 'None':adven_node = 'There is nothing here.'
     npc_idle = npc.call_npc(npc_node, 'idle')
@@ -376,10 +379,13 @@ text_field.insert(END, entry_message)
 
 
 '''Tests'''
+
 setup_world('profile')
 create_bot('testbot0', 100, 100, '9:48')
 create_bot('testbot1', 100, 100, '11:44')
 create_bot('testbot2', 100, 100, '12:48')
+#print " printing >> show_bots function returned list:  ",world.show_bots(world_file)
+store_bot_location(world_file)
 
 #-------------------------------------------------------------------------------
 root.mainloop() #Gui Programs need a loop to stay on the screen.

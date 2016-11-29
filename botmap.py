@@ -6,7 +6,7 @@ import path
 map_name = 'worldmap.txt'
 
 _map_path = path.get_path()
-_map_path = _map_path + 'data\\' + map_name 
+_map_path = _map_path + 'data\\' + map_name
 map = open(_map_path)
 map = map.read()
 map_rows = map.split() #Split the map into lines
@@ -45,7 +45,7 @@ def map_scan():
                 stored_new += 1
             else:
                 continue
-            print node(_row, _col)
+            print "botmap.map_scan > node :   ", node(_row, _col)
     conn.commit()
     conn.close()
     print "botmap: %d nodes added to the database." %(stored_new)
@@ -59,8 +59,6 @@ def get_node(_addr_):
     return db.fetchone()
     conn.commit()
     conn.close()
-
-print get_node('10:40')
 
 def recog_node(_addr_):
     cur_node = get_node(_addr_)

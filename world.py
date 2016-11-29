@@ -21,7 +21,6 @@ def add_ncolumn(tab_name, col_name, col_type, df_val): # Items, exits columns ar
 def chcknode(_addr, _rtrn):
     """Check adventure and npc columns."""
     str_node = get_node(_addr)
-    print str_node
 
     if _rtrn == 'NPC':
         rtrn = str_node[2]
@@ -52,3 +51,17 @@ def chck_bot_exist(np_row, np_col, world_file): # No errors
                     return True
                 else:
                     return False
+
+
+def show_bots(filesname):
+    """Returns a list with all the bot locations in it."""
+    stream__ = open(filesname, 'r')
+    prof__ = yaml.load(stream__)
+    bot_adrs = [] # It's a list
+    for keyval in prof__: # Go through dictionaries in yaml file.
+        if keyval.startswith('bot_') == False: # If it doesn't start with bot_
+            continue # Go back and check another one.
+        else:
+            bot_adrs.append(prof__[keyval]['loc'])
+    return bot_adrs
+print show_bots('worlds\profile.yml')
