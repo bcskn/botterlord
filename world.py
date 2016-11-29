@@ -53,7 +53,7 @@ def chck_bot_exist(np_row, np_col, world_file): # No errors
                     return False
 
 
-def show_bots(filesname):
+def show_bots(filesname): #WHY
     """Returns a list with all the bot locations in it."""
     stream__ = open(filesname, 'r')
     prof__ = yaml.load(stream__)

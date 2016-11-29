@@ -332,7 +332,7 @@ def draw_map(p_row, p_col):
                     map_field.insert(END, botmap.node(cur_row, cur_col))
         map_field.insert(END, '\n')
 
-def store_bot_location(filename):
+def store_bot_location(filename): # WHYYYYYYY
     stream = open(filename, 'r')
     prof = yaml.load(stream) # Player information is stored here.
     bot_locations = []
