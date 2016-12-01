@@ -99,25 +99,27 @@ if root.state('zoomed') == False:
 #Relief is for widget "style"
 map_frame = Frame(root,bg = "Black",relief=FLAT, height=map_frame_height)
 bot_frame = Frame(root,bg = "Black",relief=FLAT, height=bot_frame_height, width=bot_frame_width)
+cover_frame = Frame(root, relief=FLAT) # Cover screen for the entire screen
 text_field = Text(root,bg = "Black", fg="White",relief=FLAT)
 bot_field = Text(bot_frame,bg = "Black", fg="White",relief=FLAT)
 map_field = Text(map_frame,bg = "Black", fg="White",relief=FLAT)
 textentry = Entry(root, bg = "Black", fg = "White", relief=FLAT)
 scrollbar = Scrollbar(root, bg = "Black", relief=FLAT)
+
 map_frame.grid(row=1, column=1, sticky=W+E+N+S)
 bot_frame.grid(row=0, column=1, sticky=W+E+N+S, pady=(8,8))
 map_frame.grid_propagate(False)
 bot_frame.grid_propagate(False)
-
 text_field.grid(row=0,column=0,rowspan=2,sticky=W+E+N+S, padx = (8, 8), pady = (8, 0))
 bot_field.grid(sticky=W+E+N+S)
 map_field.grid(sticky=W+E+N+S)
 textentry.grid(row=2,column=0,columnspan=3,sticky=E+W, padx = 8, pady = 8)
 scrollbar.grid(row=0,column=2,rowspan=2, sticky=E+N+S, padx=(8,8), pady=(8,0))
+cover_frame.place()
 
-text_field.config(insertbackground="White",yscrollcommand=scrollbar.set, borderwidth = 10 )
-bot_field.config(insertbackground="White", borderwidth = 10, font=('Lucida Console', bot_font_size, 'normal'), )
-map_field.config(insertbackground="White", borderwidth = 8, font=('Lucida Console', map_font_size, 'normal'))
+text_field.config(insertbackground="White",yscrollcommand=scrollbar.set, borderwidth = 10, cursor=None)
+bot_field.config(insertbackground="White", borderwidth = 10, font=('Lucida Console', bot_font_size, 'normal'), cursor=None )
+map_field.config(insertbackground="White", borderwidth = 8, font=('Lucida Console', map_font_size, 'normal'), cursor=None)
 scrollbar.config(command=text_field.yview)
 textentry.config(insertbackground="White")
 
@@ -375,5 +377,6 @@ create_bot('testbot1', 100, 100, '11:44')
 create_bot('testbot2', 100, 100, '13:48')
 world.store_bot_location(world_file)
 draw_map(pc_row, pc_col)
+root.config(cursor="none")
 #-------------------------------------------------------------------------------
 root.mainloop() #Gui Programs need a loop to stay on the screen.
