@@ -46,7 +46,7 @@ start = 1.0 #Start Line
 fs_var = 0 #Fullscreen state
 real_input = ''
 real_parsed = ''
-bot_addresses = []
+bot_locs = []
 
 '''----- Variables stored in profile (yaml) file-----'''
 world_file = ''
@@ -151,11 +151,11 @@ def toggle_fullscreen(event):
 
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
+
 def _start_0():
     '''First phase of start, entering world information.'''
     text_field.insert(END, '\nPlease enter world name:')
     global waiting_value; waiting_value = True
-
     print 'start sequence 0' #Debug msg
 
 def _start_1():
@@ -169,7 +169,6 @@ def _start_1():
 
     print 'start sequence 1' #Debug msg
     started = True
-    draw_map(pc_row, pc_col)
 
 
 def _load_(): #----------------------------------> Needs an update.
@@ -311,7 +310,7 @@ def mov_pc(_direction):
 
 def draw_map(p_row, p_col):
     """Go through the nodes around the given coordinates."""
-    global world_file, bot_addresses, bot_avatar, np_bot_avatar
+    global world_file, bot_locs, bot_avatar, np_bot_avatar
     map_field.delete(1.0, END) #  Clean the map field before writing.
     prnt_mainfeed(p_row, p_col) #  Print the standed node's information
     start_row = p_row-(map_height/2)
@@ -319,29 +318,20 @@ def draw_map(p_row, p_col):
     end_row = p_row+(map_height/2)+1
     end_col= p_col+(map_width/2)+1
 
+    stream = open(world_file, 'r')
+    prof = yaml.load(stream) # Player information is stored here.
+
     for cur_row in range(start_row, end_row):
         for cur_col in range(start_col, end_col, 4):
             addrs = "%d:%d"%(cur_row, cur_col) # Turn address into a single string
             if cur_row == p_row and cur_col == p_col: # pc exists
                 map_field.insert(END, bot_avatar)
             else:
-                if addrs in bot_addresses == True:
+                if prof['locations'].__contains__(addrs) == True:
                     map_field.insert(END, np_bot_avatar)
-                    print ">>>>>>>>>>>>>IT'S TRUE!!!"
                 else:
                     map_field.insert(END, botmap.node(cur_row, cur_col))
         map_field.insert(END, '\n')
-
-def store_bot_location(filename): # WHYYYYYYY
-    stream = open(filename, 'r')
-    prof = yaml.load(stream) # Player information is stored here.
-    bot_locations = []
-    for botkey in prof:
-        if botkey.startswith('bot_') == False:
-            continue
-        else:
-            bot_locations.append(prof[botkey]['loc'])
-    ymlr.enter_data('locations', bot_locations, filename)
 
 def prnt_mainfeed(p_row, p_col):
     """Inserts the node-state text to the main feed."""
@@ -379,13 +369,11 @@ text_field.insert(END, entry_message)
 
 
 '''Tests'''
-
 setup_world('profile')
 create_bot('testbot0', 100, 100, '9:48')
 create_bot('testbot1', 100, 100, '11:44')
-create_bot('testbot2', 100, 100, '12:48')
-#print " printing >> show_bots function returned list:  ",world.show_bots(world_file)
-store_bot_location(world_file)
-
+create_bot('testbot2', 100, 100, '13:48')
+world.store_bot_location(world_file)
+draw_map(pc_row, pc_col)
 #-------------------------------------------------------------------------------
 root.mainloop() #Gui Programs need a loop to stay on the screen.

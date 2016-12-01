@@ -9,9 +9,9 @@ bot_testbot1:
 bot_testbot2:
   energy: 100
   health: 100
-  loc: '12:48'
+  loc: '13:48'
 locations:
-- '12:48'
+- '13:48'
 - '11:44'
 - '9:48'
 world_name: profile

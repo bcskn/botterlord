@@ -2,6 +2,7 @@
 import sqlite3
 import yaml
 import tools
+import ymlr
 
 
 def add_ncolumn(tab_name, col_name, col_type, df_val): # Items, exits columns are also needed.
@@ -64,4 +65,15 @@ def show_bots(filesname): #WHY
         else:
             bot_adrs.append(prof__[keyval]['loc'])
     return bot_adrs
-print show_bots('worlds\profile.yml')
+
+def store_bot_location(filename): # WHYYYYYYY
+    stream = open(filename, 'r')
+    prof = yaml.load(stream) # Player information is stored here.
+    bot_locations = []
+    for botkey in prof:
+        if botkey.startswith('bot_') == False:
+            continue
+        else:
+            bot_locations.append(prof[botkey]['loc'])
+    ymlr.enter_data('locations', bot_locations, filename)
+    return bot_locations
