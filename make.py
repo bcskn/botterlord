@@ -10,9 +10,9 @@ def remv_file(filename):
     _path = _path + filename
     os.remove(_path)
 
-remv_file('botterlord.db')   #  RENEW DATABASE
+remv_file(os.path.join('data','botterlord.db'))   #  RENEW DATABASE
 
-conn = sqlite3.connect('botterlord.db')
+conn = sqlite3.connect(os.path.join('data','botterlord.db'))
 db = conn.cursor()
 
 try:

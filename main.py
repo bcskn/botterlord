@@ -1,25 +1,15 @@
 #!python
 # -*- coding: utf-8 -*-
-import os
-import sys
-import sqlite3
-import yaml
+import os, sys, sqlite3, yaml # Dependencies
 from Tkinter import *
 #-----------------------
-import cmd
-import botmap
-import world
-import npc
-import ymlr
-import tools
-import path
+import cmd, botmap, world, npc, ymlr, tools, path
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
 '''------------Values--------------'''
 '''/Hardcoded/'''
 topbar_name = 'BotterLord DEV Version'
 icon_name = 'Botter_logo.ico'  # Icon must be in .ico format.
-cover_name = 'cover_transparent.png'
 map_frame_height = 475
 bot_frame_height = 475
 bot_frame_width = 900
@@ -37,11 +27,9 @@ default_loc = '10:44'
 
 '''------Get Images------'''
 _icon_path = os.path.join(path.get_path(),'images',icon_name) # Retrieve image from images folder.
-_cover = open(os.path.join(path.get_path(),'images',cover_name)) # Retrieve image from images folder.
-
 
 '''-----Connect to the Database-----'''
-conn = sqlite3.connect('botterlord.db')
+conn = sqlite3.connect(os.path.join('data','botterlord.db'))
 db = conn.cursor()
 
 '''-----Variables-----'''
@@ -242,10 +230,7 @@ def setup_world(_input): # CREATE NEW WORLD, FILE NAME == WORLD NAME
     global profile_name, name_entered, waiting_value, world_file
     profile_name = _input + '.yml'
     print profile_name, '<-Profile name'
-    _path = path.get_path()
-    _path = _path + 'worlds\\' + profile_name
-    print _path, '<-Path'
-    world_file = _path # Set world_file as full location of the file
+    world_file = os.path.join(path.get_path(),'worlds',profile_name)
     world_yml = open(world_file , 'w+') #--Open if profile exists; create if not
     yml_info = {'world_name':_input}
     ymlr.insert(yml_info, world_file)

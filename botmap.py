@@ -5,11 +5,9 @@ import path
 
 map_name = 'worldmap.txt'
 
-_map_path = path.get_path()
-_map_path = _map_path + 'data\\' + map_name
-map = open(_map_path)
-map = map.read()
-map_rows = map.split() #Split the map into lines
+map_file = open(os.path.join(path.get_path(),'data', map_name)).read()
+
+map_rows = map_file.split() #Split the map into lines
 map_row = []
 
 def node(_row, _col):
@@ -21,7 +19,7 @@ def node(_row, _col):
 
 def map_scan():
     """Scan worldmap.txt and store it in botterlord.db nodes table."""
-    conn = sqlite3.connect('botterlord.db')
+    conn = sqlite3.connect(os.path.join('data','botterlord.db'))
     db = conn.cursor()
     stored_new = 0
     map_row = None
@@ -52,7 +50,7 @@ def map_scan():
 
 def get_node(_addr_):
     """Fetch a node from the database file."""
-    conn = sqlite3.connect('botterlord.db')
+    conn = sqlite3.connect(os.path.join('data','botterlord.db'))
     db = conn.cursor()
     _addrdb_ = (_addr_,)
     db.execute('SELECT * FROM NODES WHERE ADDR = ?', _addrdb_)

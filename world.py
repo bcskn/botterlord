@@ -1,13 +1,9 @@
 """File for setting up adventures and information in nodes."""
-import sqlite3
-import yaml
-import tools
-import ymlr
-
+import sqlite3, os, yaml, tools, ymlr
 
 def add_ncolumn(tab_name, col_name, col_type, df_val): # Items, exits columns are also needed.
     """Add a new column with default value."""
-    conn = sqlite3.connect('botterlord.db')
+    conn = sqlite3.connect(os.path.join('data','botterlord.db'))
     db = conn.cursor()
     try:
         db.execute(" ALTER TABLE {tn} \
@@ -31,7 +27,7 @@ def chcknode(_addr, _rtrn):
 
 def get_node(_addr_):
     """Fetch a node from the database file."""
-    conn = sqlite3.connect('botterlord.db')
+    conn = sqlite3.connect(os.path.join('data','botterlord.db'))
     db = conn.cursor()
     _addrdb_ = (_addr_,)
     db.execute('SELECT * FROM NODES WHERE ADDR = ?', _addrdb_)

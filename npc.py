@@ -1,10 +1,11 @@
 """Code where npc and info about <rumors> will be handled."""
 import sqlite3
+import os
 import world
 
 def add_npc_db(_addr, _npc):
     """Update node column npc."""
-    conn = sqlite3.connect('botterlord.db')
+    conn = sqlite3.connect(os.path.join('data','botterlord.db'))
     db = conn.cursor()
     _valdb = (_npc, _addr)
     db.execute("""\

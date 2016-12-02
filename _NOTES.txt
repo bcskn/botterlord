@@ -1,0 +1,277 @@
+///// DRY + ORTHOGONAL SYSTEMS + Prefer human readable formats
+If there is a bot placed here insert np bot avatar.
+else:
+          for bot_key in profile:
+              chkd_row = 0; chkd_col = 0
+              if 'loc' in profile[bot_key]:
+                  addr = tools.parse_str_loc(profile[bot_key]['loc'])
+                  chkd_row = int(addr[0]); chkd_col = int(addr[1])
+                  if chkd_row == cur_row and chkd_col == cur_col:
+                      bot_exists = True
+                      print 'BOT EXISTS !!!'
+                  else:
+                      bot_exists = False
+                      print 'DOESNT EXIST'
+              if bot_exists == True:
+                  map_field.insert(END, np_bot_avatar)
+
+
+                  for cur_row in range(start_row, end_row):
+                        for cur_col in range(start_col, end_col, 4):
+                            bot_exists = False
+                            if cur_row == p_row and cur_col == p_col: # pc exists
+                                map_field.insert(END, bot_avatar)
+                            else:
+                                map_field.insert(END, botmap.node(cur_row, cur_col))
+                        map_field.insert(END, '\n')
+
+
+check existing profiles.
+if already exist with a same name print error message.
+load function prints out existing bots too.
+
+Set movement points similar to LorenMud
+Event Schedule !
+Create <help> command to list known commands.
+Load system.
+Save # <------------------------------After using the command to save write all information in yaml.
+Bot control switching. <------------------------- Priority
+It's like having lots of alts in the game.
+
+Store bots in YAML.
+Load bot information when you switch to it's control.
+
+How to let bots move when you are not in control of them ?
+Copy main game ? And let instances interact with each other through changing
+a file ?
+
+All bots are identical when it comes to their control scheme.
+You can't control the main character but you can control a bot directly.
+
+-------------------------------------------------------------------------------------------------------
+>Tkinter AFTER function
+
+-------------------------------------------------------------------------------------------------------
+YAML Systems and PyYaml to store configuration settings for BotterLord
+
+>YAML:
+  Easy human readable file that is also easy to parse.
+  Good for configuration files.
+
+-------------------------------------------------------------------------------------------------------
+>Packages:
+
+  refr:
+    https://docs.python.org/2/tutorial/modules.html
+    https://www.youtube.com/watch?v=qh3mJ1elP8I&index=21&list=PLeLU1pCom3Oo4w7XE3wlrdWv6v7lA0hwb
+
+  Only need to have a __init__.py in them and python will register it as a
+  package even if it's empty.
+
+  myFirstPackage:
+    __init__.py: #Basically the first line of code that will be executed when the package is imported.
+      from Item import Sword
+    Item.py:
+      class Sword(object):
+        __init__
+
+-------------------------------------------------------------------------------------------------------
+>Classes:
+  refr: https://docs.python.org/2/tutorial/classes.html
+  class Item(object):
+    def __init__(self, name'', value=0, quantity=1):
+      self.name = name
+      self.value = value
+      self.quantity = quantity
+
+    def __repr__(self):
+      name = self.name
+      value = self.value
+      qty = self.quantity
+      reprasantation = "<Item>"
+
+
+      global mov_wait
+            global mov_time
+            if mov_wait == False:
+                mov_wait = True
+                root.after(mov_time, res_time) # Schedule reset wait time.
+                mov_pc(legal_command)
+                print 'mov_pc triggered' #DEBUG
+            else: root.after(mov_time, mov_pc, legal_command) # Queued commands
+
+Don't create seperate window just change the widgets in the window.
+BotterLord Admin System:
+  Allow the user to add ingame objects through the game with the commands.
+
+If data is static(no need to deal with lots of data at the same time or change
+it regularly) hardcode them into a seperate file based on their category.
+Mission Format:
+There won't be a journal to keep track of the missions the player either will
+program a notepad to keep track of them or just write them in real life.
+The missions won't be said that they are missions but it will mostly be in
+the format of rumors and rewards for doing something the rewards won't be known
+if the player doesn't negotiate the price of their services.
+
+IDEA 0:
+Data types of monsters (that are created with magicode):
+AdsjKlkkklOIDSH00901990
+
+Write a decryption program for monster classes.
+
+How to use this mechanic in game ?
+To fight these monsters properly you need to learn theşr algorithm and program
+your minions accordingly
+
+Dungeon Format:
+There will be ruins that the monsters born from the <magicom?> the player
+will find them based on the rumors of the towns folk and track those monsters.
+There will be random encounters that are not actually random. If a monster is
+killed the rumors that are connected to it should disappear and instead give
+way to praise for the character.
+
+/////////////////////////////
+BotterLord is a full on programming rpg. The basic mechanic is to create,
+program and upgrade your bots. The bots will have a basic rpg style
+skill sheet.
+
+The number of npcs will be a lot because the questing system needs the player
+to talk to the npcs about rumors and sightings.
+
+
+############################  THE SCRIPT  #####################################
+The alien reporter has come down to earth in search for fresh news about
+the newly discovered alien species. He finds a bazaar after entering the city
+interested he starts to roam around and look at things while keeping note in
+his mind. And after getting some good stories to cover he goes back to
+his ship. But he notices that he is missing his <magicode> a tool that
+lets him program the realities of the world. Of course it's power is limited
+and it can't break the reality in a cosmic scale. Or it was supposed to be so.
+But it seems he was pickpocketed and his magicode was sold the a man name
+merlin a crazy person that is infamous in the city. Merlin plays aroud with
+magicode and in a twisted prank of fate the magicode syncs better with humans
+than it did with the aliens. The reason for it being the the workings of
+magicode is very similar to the workings of the human mind. Both using a
+non directive method of communication between neurons. And this lets merlin
+to create all kinds of things from his imagination and start to rule over the
+country with his power. And the things he created starts to roam over the world
+becoming the legendary monsters. You get a call from the alien godess telling
+you to fix this or face execution. You hook up a makeshift magicode that lets
+you create things but it's not like the original magicode and it needs data
+from the original magicode that you can by harvesting the monsters merlin
+has created. And because that you aren't a fighter you need minions to fight
+for you.
+
+Create your minions.
+Stop the wizard.
+Become the Overlord of the world or go back to your home planet.
+The choice is yours.
+
+____________________________Main characters____________________________________
+
+Zolshrein (The Alien Reporter)
+Ariadneir (The Alien Goddess) --> Kind of a bitch at times but has a fragile personality.
+
+
+Imshreim (Your Daughter) --> Doesn't like you very much
+Aeolneius
+
+-------------------------------ALNEIR------------------------------------------
+Culture:
+A similar culture to modern mankind.
+They have one name that has two parts <pass>
+They feed on radiation and regular water. The matter in their homeworld
+stores the radiation from their star.
+They are covered with a dark, thin and soft metallic skin.
+They need a regular supply of radiation. Zolshreim uses his ship's reserves
+of uranium and plutonium to survive. He must dig more on the earth and use
+everything the sun outputs.
+-------------------------------------------------------------------------------
+
+
+New option to delete stored profile and also delete the database.
+Reload the node and npc data with fresh player file.
+
+Change friendly code.
+
+Kinds of information the nodes will store:
+Enemies inside,
+Environment description,
+Exits,
+Items,
+
+>Add a bug counter-measure:
+Take the mod of player column by 4 if it's not 0 relocate player to a nearby node.
+
+
+> Chatbot npcs :
+Concept chatbot techniques :
+  Things that npcs will talk about.
+  Example:
+    >Who are you (Npc information)
+    >Where are you (Npc Location)
+    >What happened (Events) --> This will be important for questing and
+    gathering information through bots.
+    >Who am I (Things npc knows about the player or bot)
+
+    >And other information that bots learn from old english text files.
+
+    '''
+    17 Nodes per line
+    20*17 = 340 Nodes overall
+    0                                                                  68
+    00000000000000000000000000000000000000000000000000000000000000000000  <0
+    00000000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000<00>00000000000000000000000000000000 <10
+    00000000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000000000000000000000000000
+    00000000000000000000000000000000000000000000000000000000000000000000 <20
+    '''
+    """"
+
+    Origin: 1:1
+    get [XX] location data
+    Location of the player: 10:50
+
+    """
+    """
+
+
+    Px: Player Location X
+    Py: Player Location Y
+    msp: Map start point
+
+    msp = Px-10,Py-10
+    mep = Px+10,Py+10
+
+    Example:
+    If Player is in (18,56)
+    First node will be in 8, 46
+    And the last printed node in 28, 66
+
+    If the player is close to the border:
+    Code:
+    If Px-10 < 0:
+        Node = '     '
+
+
+    [   ] can be ..... or ^^^^^ or anything in the map text.
+    <OO> is the player/bot
+    *Divide the map lines into 5 character packs(nodes), recognize the characters (example: if the node is ^^^^^ it will name it forest),
+    place the player in the middle of the screen, print player's surroundings, repeat* <-- This is how the map will work.
+    """
