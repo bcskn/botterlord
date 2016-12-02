@@ -19,6 +19,7 @@ import path
 '''/Hardcoded/'''
 topbar_name = 'BotterLord DEV Version'
 icon_name = 'Botter_logo.ico'  # Icon must be in .ico format.
+cover_name = 'cover_transparent.png'
 map_frame_height = 475
 bot_frame_height = 475
 bot_frame_width = 900
@@ -34,8 +35,10 @@ default_hp = 100
 default_mp = 100
 default_loc = '10:44'
 
-'''------Get Icon Location------'''
-_icon_path = path.get_path() + 'images\\' + icon_name # Retrieve image from images folder.
+'''------Get Images------'''
+_icon_path = os.path.join(path.get_path(),'images',icon_name) # Retrieve image from images folder.
+_cover = open(os.path.join(path.get_path(),'images',cover_name)) # Retrieve image from images folder.
+
 
 '''-----Connect to the Database-----'''
 conn = sqlite3.connect('botterlord.db')
@@ -57,6 +60,7 @@ np_bot_avatar = '<oo>' # Uncontrolled bot sign
 pc_name = '' # Name of the bot being controlled.
 pc_row = 10
 pc_col = 40
+cursor_show = "none" # Not boolean tkinter wants "none" to hide cursor.
 
 #---------------------------------------------
 started = False #In title screen
@@ -99,14 +103,13 @@ if root.state('zoomed') == False:
 #Relief is for widget "style"
 map_frame = Frame(root,bg = "Black",relief=FLAT, height=map_frame_height)
 bot_frame = Frame(root,bg = "Black",relief=FLAT, height=bot_frame_height, width=bot_frame_width)
-cover_frame = Frame(root, relief=FLAT) # Cover screen for the entire screen
 text_field = Text(root,bg = "Black", fg="White",relief=FLAT)
 bot_field = Text(bot_frame,bg = "Black", fg="White",relief=FLAT)
 map_field = Text(map_frame,bg = "Black", fg="White",relief=FLAT)
 textentry = Entry(root, bg = "Black", fg = "White", relief=FLAT)
 scrollbar = Scrollbar(root, bg = "Black", relief=FLAT)
 
-map_frame.grid(row=1, column=1, sticky=W+E+N+S)
+map_frame.grid(row=1, column=1, sticky=W+E+N+S, cursor=None)
 bot_frame.grid(row=0, column=1, sticky=W+E+N+S, pady=(8,8))
 map_frame.grid_propagate(False)
 bot_frame.grid_propagate(False)
@@ -115,18 +118,18 @@ bot_field.grid(sticky=W+E+N+S)
 map_field.grid(sticky=W+E+N+S)
 textentry.grid(row=2,column=0,columnspan=3,sticky=E+W, padx = 8, pady = 8)
 scrollbar.grid(row=0,column=2,rowspan=2, sticky=E+N+S, padx=(8,8), pady=(8,0))
-cover_frame.place()
 
-text_field.config(insertbackground="White",yscrollcommand=scrollbar.set, borderwidth = 10, cursor=None)
-bot_field.config(insertbackground="White", borderwidth = 10, font=('Lucida Console', bot_font_size, 'normal'), cursor=None )
-map_field.config(insertbackground="White", borderwidth = 8, font=('Lucida Console', map_font_size, 'normal'), cursor=None)
-scrollbar.config(command=text_field.yview)
-textentry.config(insertbackground="White")
+text_field.config(insertbackground="White",yscrollcommand=scrollbar.set, borderwidth = 10, cursor="none")
+bot_field.config(insertbackground="White", borderwidth = 10, font=('Lucida Console', bot_font_size, 'normal'), cursor=cursor_show)
+map_field.config(insertbackground="White", borderwidth = 8, font=('Lucida Console', map_font_size, 'normal'), cursor=cursor_show)
+scrollbar.config(command=text_field.yview,cursor=cursor_show)
+textentry.config(insertbackground="White", cursor=cursor_show)
 
 root.grid_rowconfigure(0, weight=1)
 root.grid_columnconfigure(0, weight=1)
 root.grid_propagate(False)
 
+root.config(cursor=cursor_show)
 
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
@@ -173,7 +176,7 @@ def _start_1():
     started = True
 
 
-def _load_(): #----------------------------------> Needs an update.
+def _load_():
     """Choose already existing yml file to set as profile_name."""
     pass
 
@@ -313,6 +316,7 @@ def mov_pc(_direction):
 def draw_map(p_row, p_col):
     """Go through the nodes around the given coordinates."""
     global world_file, bot_locs, bot_avatar, np_bot_avatar
+    map_field.config(state=NORMAL)
     map_field.delete(1.0, END) #  Clean the map field before writing.
     prnt_mainfeed(p_row, p_col) #  Print the standed node's information
     start_row = p_row-(map_height/2)
@@ -334,6 +338,7 @@ def draw_map(p_row, p_col):
                 else:
                     map_field.insert(END, botmap.node(cur_row, cur_col))
         map_field.insert(END, '\n')
+    map_field.config(state=DISABLED)
 
 def prnt_mainfeed(p_row, p_col):
     """Inserts the node-state text to the main feed."""
@@ -377,6 +382,6 @@ create_bot('testbot1', 100, 100, '11:44')
 create_bot('testbot2', 100, 100, '13:48')
 world.store_bot_location(world_file)
 draw_map(pc_row, pc_col)
-root.config(cursor="none")
+
 #-------------------------------------------------------------------------------
 root.mainloop() #Gui Programs need a loop to stay on the screen.
