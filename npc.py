@@ -1,7 +1,6 @@
 """Code where npc and info about <rumors> will be handled."""
-import sqlite3
-import os
-import world
+import os, sqlite3, world
+
 
 def add_npc_db(_addr, _npc):
     """Update node column npc."""

@@ -1,5 +1,4 @@
-import yaml
-import path
+import yaml, tools
 
 def retrieve(filename):
     with open(filename, 'r') as file_descriptor:

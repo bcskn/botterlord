@@ -1,11 +1,11 @@
 """World map and node handling."""
 import os
 import sqlite3
-import path
+import tools
 
 map_name = 'worldmap.txt'
 
-map_file = open(os.path.join(path.get_path(),'data', map_name)).read()
+map_file = open(os.path.join(tools.get_path(),'data', map_name)).read()
 
 map_rows = map_file.split() #Split the map into lines
 map_row = []

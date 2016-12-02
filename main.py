@@ -3,7 +3,7 @@
 import os, sys, sqlite3, yaml # Dependencies
 from Tkinter import *
 #-----------------------
-import cmd, botmap, world, npc, ymlr, tools, path
+import cmd, botmap, world, npc, ymlr, tools
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
 '''------------Values--------------'''
@@ -26,7 +26,7 @@ default_mp = 100
 default_loc = '10:44'
 
 '''------Get Images------'''
-_icon_path = os.path.join(path.get_path(),'images',icon_name) # Retrieve image from images folder.
+_icon_path = os.path.join(tools.get_path(),'images',icon_name) # Retrieve image from images folder.
 
 '''-----Connect to the Database-----'''
 conn = sqlite3.connect(os.path.join('data','botterlord.db'))
@@ -230,7 +230,7 @@ def setup_world(_input): # CREATE NEW WORLD, FILE NAME == WORLD NAME
     global profile_name, name_entered, waiting_value, world_file
     profile_name = _input + '.yml'
     print profile_name, '<-Profile name'
-    world_file = os.path.join(path.get_path(),'worlds',profile_name)
+    world_file = os.path.join(tools.get_path(),'worlds',profile_name)
     world_yml = open(world_file , 'w+') #--Open if profile exists; create if not
     yml_info = {'world_name':_input}
     ymlr.insert(yml_info, world_file)
