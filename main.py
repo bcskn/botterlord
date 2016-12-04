@@ -1,6 +1,6 @@
 #!python
 # -*- coding: utf-8 -*-
-import os, sys, sqlite3, yaml # Dependencies
+import os, sys, sqlite3, yaml, platform # Dependencies
 from Tkinter import *
 #-----------------------
 import cmd, botmap, world, npc, ymlr, tools
@@ -82,11 +82,15 @@ entry_message = """\
 
 root = Tk() #Main Frame
 root.title(topbar_name)
-root.iconbitmap(_icon_path) #Window icon
+
+try: root.iconbitmap(_icon_path) #Window icon
+except: print "Can't get icon because of unknown reasons."
 root.minsize(window_minimum_width, window_minimum_height)
 root.configure(background=window_background_color)
-if root.state('zoomed') == False:
-    root.state('zoomed')
+
+if platform.system == "Windows":
+    if root.state('zoomed') == False:
+        root.state('zoomed')
 
 #Relief is for widget "style"
 map_frame = Frame(root,bg = "Black",relief=FLAT, height=map_frame_height)
