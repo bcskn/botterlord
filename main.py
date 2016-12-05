@@ -18,6 +18,7 @@ window_minimum_width = 1000
 window_background_color = 'gray50'
 map_font_size = 13
 bot_font_size = 15
+main_font_size = 10
 map_width = 64
 map_height = 20
 #----------------------------------------------
@@ -88,9 +89,13 @@ except: print "Can't get icon because of unknown reasons."
 root.minsize(window_minimum_width, window_minimum_height)
 root.configure(background=window_background_color)
 
-if platform.system == "Windows":
+print platform.system()
+if platform.system() == "Windows":
     if root.state('zoomed') == False:
         root.state('zoomed')
+
+else: root.attributes('-fullscreen', True) # If not windows automatically switch to fullscreen
+
 
 #Relief is for widget "style"
 map_frame = Frame(root,bg = "Black",relief=FLAT, height=map_frame_height)
@@ -111,7 +116,7 @@ map_field.grid(sticky=W+E+N+S)
 textentry.grid(row=2,column=0,columnspan=3,sticky=E+W, padx = 8, pady = 8)
 scrollbar.grid(row=0,column=2,rowspan=2, sticky=E+N+S, padx=(8,8), pady=(8,0))
 
-text_field.config(insertbackground="White",yscrollcommand=scrollbar.set, borderwidth = 10, cursor="none")
+text_field.config(insertbackground="White",yscrollcommand=scrollbar.set, borderwidth = 10, font=('Lucida Console', main_font_size, 'normal'), cursor="none")
 bot_field.config(insertbackground="White", borderwidth = 10, font=('Lucida Console', bot_font_size, 'normal'), cursor=cursor_show)
 map_field.config(insertbackground="White", borderwidth = 8, font=('Lucida Console', map_font_size, 'normal'), cursor=cursor_show)
 scrollbar.config(command=text_field.yview,cursor=cursor_show)
@@ -146,8 +151,21 @@ def toggle_fullscreen(event):
     else:
         root.attributes('-fullscreen', True)
 
+def scale_font_size():
+    print text_field.winfo_width()
+    global main_font_size, botter_title
+    pixel_ratio = 0.01
+    main_font_size = int(text_field.winfo_width()*pixel_ratio) + \
+    (text_field.winfo_width() % pixel_ratio > 0)
+    print main_font_size
+    text_field.config(font=('Lucida Console', main_font_size, 'normal'))
+    botter_title = tools.fit_title(root.winfo_screenwidth()) # Won't work because title is already printed
+
+
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
+
+
 
 def _start_0():
     '''First phase of start, entering world information.'''
@@ -371,6 +389,6 @@ create_bot('testbot1', 100, 100, '11:44')
 create_bot('testbot2', 100, 100, '13:48')
 world.store_bot_location(world_file)
 draw_map(pc_row, pc_col)
-
+root.after(500, scale_font_size) # Needs time
 #-------------------------------------------------------------------------------
 root.mainloop() #Gui Programs need a loop to stay on the screen.

@@ -61,6 +61,9 @@ def get_node(_addr_):
 def recog_node(_addr_):
     cur_node = get_node(_addr_)
     node_sign = cur_node[1]
-    if node_sign == '^^^^':
-        return 'a Forest'
+    if node_sign == '^^^^': return 'a Forest'
+    if node_sign == '....': return 'Plains'
+    if node_sign == '~~~~': return 'a Lake'
+    if node_sign == '/\\/\\': return 'Mountains'
+
     else: return 'Unknown'
