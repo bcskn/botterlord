@@ -266,12 +266,16 @@ def get_last_input(event):
     textentry.insert(END, last_input)
 
 def switch_bot(switch_to):
+    """Control another Bot."""
     global pc_row, pc_col, pc_name, world_file
+    ymlr.internal_data(world_file, 'in', "%d:%d"%(pc_row, pc_col), pc_name, 'loc')
+
     botname = 'bot_' + switch_to
     bot_data = ymlr.get_data(botname, world_file)
     parse_loc = tools.parse_str_loc(bot_data['loc'])
     pc_row = parse_loc[0]; pc_col = parse_loc[1]
     pc_row = int(pc_row); pc_col = int(pc_col)
+    pc_name = botname
     draw_map(pc_row, pc_col)
     print "printing >> switch_bot > pc_row, pc_col, bot_data:   ",pc_row, pc_col , bot_data
 
