@@ -208,18 +208,19 @@ class Bot:
         self.energy = mp
         self.location = loc
         namebot = 'bot_' + self.botname # Bot tag in the front of the yaml elements.
-        botinfo = {'health': self.health, 'energy': self.energy, 'loc': self.location}
+        botinfo = {'health': self.health, 'energy': self.energy, 'location': self.location}
         print namebot,',', botinfo,',', profile_name
         ymlr.enter_data(namebot, botinfo, world_file)
 
-def create_bot(namebot, hp = default_hp, mp = default_mp, loc = default_loc):
-    try : exists_ = ymlr.get_data('bot_' + namebot, world_file) # Check if bot exists in yaml file.
-    except :
-        bots[namebot] = Bot(namebot, hp, mp, loc)
-        str_bot = "\n►[ ID: %s | HP: %d | MP: %d | LOC: %s ]" %(bots[namebot].botname,
-        bots[namebot].health , bots[namebot].energy ,bots[namebot].location) # Print bot stats in the bot_field.
-        print str_bot
-        bot_field.insert(END, str_bot)
+def update_botfield():
+    """Get data from worldfile on player bots and update bot_field display."""
+    #Changeable order.
+    global world_file; prof = yaml.load(open(world_file, 'r')) #Only read it.
+    for key in prof:
+        if key.startswith("bot_") == True:
+            str_bot = "\n►[ ID: %s | HP: %d | MP: %d | LOC: %s ]" %(key, prof[key]["health"],
+            prof[key]["energy"], prof[key]["location"])
+            bot_field.insert(END, str_bot)
 
 def enterpressed(event):
     """Get input from text entry when Enter(return) is pressed and delete the previous text."""
@@ -268,7 +269,7 @@ def get_last_input(event):
 def switch_bot(switch_to):
     """Control another Bot."""
     global pc_row, pc_col, pc_name, world_file
-    ymlr.internal_data(world_file, 'in', "%d:%d"%(pc_row, pc_col), pc_name, 'loc')
+    ymlr.internal_data(world_file, 'in', "%d:%d"%(pc_row, pc_col), pc_name, 'location')
 
     botname = 'bot_' + switch_to
     bot_data = ymlr.get_data(botname, world_file)
@@ -388,11 +389,13 @@ text_field.insert(END, entry_message)
 
 '''Tests'''
 setup_world('profile')
-create_bot('testbot0', 100, 100, '9:48')
-create_bot('testbot1', 100, 100, '11:44')
-create_bot('testbot2', 100, 100, '13:48')
+world.create_bot(world_file, 'testbot0', 100, 100, '9:48')
+world.create_bot(world_file, 'testbot1', 100, 100, '11:44')
+world.create_bot(world_file, 'testbot2', 100, 100, '13:48')
 world.store_bot_location(world_file)
 draw_map(pc_row, pc_col)
 root.after(500, scale_font_size) # Needs time
+#switch_bot("testbot2")
+update_botfield()
 #-------------------------------------------------------------------------------
 root.mainloop() #Gui Programs need a loop to stay on the screen.

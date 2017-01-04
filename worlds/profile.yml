@@ -1,15 +1,15 @@
 bot_testbot0:
   energy: 100
   health: 100
-  loc: '9:48'
+  location: '9:48'
 bot_testbot1:
   energy: 100
   health: 100
-  loc: '11:44'
+  location: '11:44'
 bot_testbot2:
   energy: 100
   health: 100
-  loc: '13:48'
+  location: '13:48'
 locations:
 - '13:48'
 - '11:44'
