@@ -4,6 +4,7 @@ import os, sys, sqlite3, yaml, platform # Dependencies
 from Tkinter import *
 #-----------------------
 import cmd, botmap, world, npc, ymlr, tools
+from texts import status
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
 '''------------Values--------------'''
@@ -49,7 +50,6 @@ np_bot_avatar = '<oo>' # Uncontrolled bot sign
 pc_name = '' # Name of the bot being controlled.
 pc_row = 10
 pc_col = 40
-cursor_show = "none" # Not boolean tkinter wants "none" to hide cursor.
 
 #---------------------------------------------
 started = False #In title screen
@@ -116,20 +116,28 @@ map_field.grid(sticky=W+E+N+S)
 textentry.grid(row=2,column=0,columnspan=3,sticky=E+W, padx = 8, pady = 8)
 scrollbar.grid(row=0,column=2,rowspan=2, sticky=E+N+S, padx=(8,8), pady=(8,0))
 
-text_field.config(insertbackground="White",yscrollcommand=scrollbar.set, borderwidth = 10, font=('Lucida Console', main_font_size, 'normal'), cursor="none")
-bot_field.config(insertbackground="White", borderwidth = 10, font=('Lucida Console', bot_font_size, 'normal'), cursor=cursor_show)
-map_field.config(insertbackground="White", borderwidth = 8, font=('Lucida Console', map_font_size, 'normal'), cursor=cursor_show)
-scrollbar.config(command=text_field.yview,cursor=cursor_show)
-textentry.config(insertbackground="White", cursor=cursor_show)
+text_field.config(insertbackground="White",yscrollcommand=scrollbar.set, borderwidth = 10, font=('Lucida Console', main_font_size, 'normal'))
+bot_field.config(insertbackground="White", borderwidth = 10, font=('Lucida Console', bot_font_size, 'normal'))
+map_field.config(insertbackground="White", borderwidth = 8, font=('Lucida Console', map_font_size, 'normal'))
+scrollbar.config(command=text_field.yview)
+textentry.config(insertbackground="White")
 
 root.grid_rowconfigure(0, weight=1)
 root.grid_columnconfigure(0, weight=1)
 root.grid_propagate(False)
 
-root.config(cursor=cursor_show)
 
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
+def cursor_style(style):
+    text_field.config(cursor=style)
+    bot_field.config(cursor=style)
+    map_field.config(cursor=style)
+    scrollbar.config(cursor=style)
+    textentry.config(cursor=style)
+    root.config(cursor=style)
+cursor_style("dotbox")
+
 def tag_yellow(word):
     """Highlight text (UNKNOWN COMMAND)."""
     pos = text_field.search(word, start, stopindex = END)
@@ -164,9 +172,6 @@ def scale_font_size():
 
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
-
-
-
 def _start_0():
     '''First phase of start, entering world information.'''
     text_field.insert(END, '\nPlease enter world name:')
@@ -196,9 +201,6 @@ def save_state():
     #ymlr.enter_data('')
     root.after(1000, save_state)
 root.after(1000, save_state) # Initiate save loop
-
-def _quit_():
-    root.quit()
 
 class Bot:
     def __init__(self, namebot, hp, mp, loc):
@@ -312,9 +314,11 @@ def try_execute_command(userinput0):
 
         if legal_command == 'start': _start_0()
         if legal_command == 'load': _load_()
-        if legal_command == 'quit': _quit_()
-
+        if legal_command == 'quit': root.quit()
         if legal_command == 'control': switch_bot(parsing[1])
+        if legal_command == 'show_mouse': cursor_style("dotbox")
+        if legal_command == 'hide_mouse': cursor_style("none")
+        if legal_command == 'status': pass # Show current status
 
 def mov_pc(_direction):
     """Relocate player/bot location based on given direction."""

@@ -1,13 +1,5 @@
-#Compiled python files
-botmap.pyc
-main.pyc
-create_db.pyc
-world.pyc
-npc.pyc
-cmd.pyc
-path.pyc
-ymlr.pyc
-tools.pyc
+*.pyc
+texts/*.pyc
 LICENSE
 params.json
 README.md
