@@ -6,22 +6,23 @@ from Tkinter import *
 import cmd, botmap, world, npc, ymlr, tools
 from texts import status
 #-------------------------------------------------------------------------------
+#KILL THE MAP !!!
 #-------------------------------------------------------------------------------
 '''------------Values--------------'''
 '''/Hardcoded/'''
 topbar_name = 'BotterLord DEV Version'
 icon_name = 'Botter_logo.ico'  # Icon must be in .ico format.
-map_frame_height = 475
-bot_frame_height = 475
-bot_frame_width = 900
+
+map_frame_height = 475 #475
+bot_frame_height = 475 #475
+bot_frame_width = 450 #900
+
 window_minimum_height = 300
 window_minimum_width = 1000
 window_background_color = 'gray50'
 map_font_size = 13
 bot_font_size = 15
 main_font_size = 10
-map_width = 64
-map_height = 20
 #----------------------------------------------
 default_hp = 100
 default_mp = 100
@@ -279,7 +280,6 @@ def switch_bot(switch_to):
     pc_row = parse_loc[0]; pc_col = parse_loc[1]
     pc_row = int(pc_row); pc_col = int(pc_col)
     pc_name = botname
-    draw_map(pc_row, pc_col)
     print "printing >> switch_bot > pc_row, pc_col, bot_data:   ",pc_row, pc_col , bot_data
 
 def try_execute_command(userinput0):
@@ -327,34 +327,7 @@ def mov_pc(_direction):
     if _direction == 'south': pc_row += 1
     if _direction == 'east': pc_col += 4
     if _direction == 'west': pc_col -= 4
-    draw_map(pc_row, pc_col)
 
-def draw_map(p_row, p_col):
-    """Go through the nodes around the given coordinates."""
-    global world_file, bot_locs, bot_avatar, np_bot_avatar
-    map_field.config(state=NORMAL)
-    map_field.delete(1.0, END) #  Clean the map field before writing.
-    prnt_mainfeed(p_row, p_col) #  Print the standed node's information
-    start_row = p_row-(map_height/2)
-    start_col = p_col-(map_width/2)
-    end_row = p_row+(map_height/2)+1
-    end_col= p_col+(map_width/2)+1
-
-    stream = open(world_file, 'r')
-    prof = yaml.load(stream) # Player information is stored here.
-
-    for cur_row in range(start_row, end_row):
-        for cur_col in range(start_col, end_col, 4):
-            addrs = "%d:%d"%(cur_row, cur_col) # Turn address into a single string
-            if cur_row == p_row and cur_col == p_col: # pc exists
-                map_field.insert(END, bot_avatar)
-            else:
-                if prof['locations'].__contains__(addrs) == True:
-                    map_field.insert(END, np_bot_avatar)
-                else:
-                    map_field.insert(END, botmap.node(cur_row, cur_col))
-        map_field.insert(END, '\n')
-    map_field.config(state=DISABLED)
 
 def prnt_mainfeed(p_row, p_col):
     """Inserts the node-state text to the main feed."""
@@ -393,11 +366,7 @@ text_field.insert(END, entry_message)
 
 '''Tests'''
 setup_world('profile')
-world.create_bot(world_file, 'testbot0', 100, 100, '9:48')
-world.create_bot(world_file, 'testbot1', 100, 100, '11:44')
-world.create_bot(world_file, 'testbot2', 100, 100, '13:48')
 world.store_bot_location(world_file)
-draw_map(pc_row, pc_col)
 root.after(500, scale_font_size) # Needs time
 #switch_bot("testbot2")
 update_botfield()
