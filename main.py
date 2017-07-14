@@ -15,9 +15,9 @@ print "Monitor Resolution: %s "%(screen_size)
 
 default_cursor_style = "dotbox"
 
-map_frame_height = screen_size["height"]/10 #475
-bot_frame_height = screen_size["height"]/10#475
-bot_frame_width = screen_size["width"]/3 #900 # Also the map is bound to this tile thus == map_frame_width
+map_frame_height = screen_size["height"]/6 #475
+bot_frame_height = screen_size["height"]/6 #475
+side_frame_width = screen_size["width"]/3 #900 # Also the map is bound to this tile thus == map_frame_width
 
 window_minimum_height = screen_size["height"]/3
 window_minimum_width = screen_size["width"]/3
@@ -36,6 +36,7 @@ default_hp = 100
 default_mp = 100
 default_loc = '10:44'
 #----------------------------------------------
+
 
 '''------Get Images------'''
 _icon_path = os.path.join(tools.get_path(),'images',icon_name) # Retrieve image from images folder.
@@ -107,8 +108,8 @@ else: root.attributes('-fullscreen', True) # If not windows automatically switch
 
 
 #Relief is for widget "style"
-map_frame = Frame(root,bg = "Black",relief=FLAT, height=map_frame_height)
-bot_frame = Frame(root,bg = "Black",relief=FLAT, height=bot_frame_height, width=bot_frame_width)
+map_frame = Frame(root,bg = "Black",relief=FLAT, height=map_frame_height, width=side_frame_width)
+bot_frame = Frame(root,bg = "Black",relief=FLAT, height=bot_frame_height, width=side_frame_width)
 text_field = Text(root,bg = "Black", fg="White",relief=FLAT)
 bot_field = Text(bot_frame,bg = "Black", fg="White",relief=FLAT)
 map_field = Text(map_frame,bg = "Black", fg="White",relief=FLAT)
@@ -119,9 +120,8 @@ map_frame.grid(row=1, column=1, sticky=W+E+N+S, cursor=None)
 bot_frame.grid(row=0, column=1, sticky=W+E+N+S, pady=(8,8))
 map_frame.grid_propagate(False)
 bot_frame.grid_propagate(False)
+
 text_field.grid(row=0,column=0,rowspan=2,sticky=W+E+N+S, padx = (8, 8), pady = (8, 0))
-bot_field.grid(sticky=W+E+N+S)
-map_field.grid(sticky=W+E+N+S)
 textentry.grid(row=2,column=0,columnspan=3,sticky=E+W, padx = 8, pady = 8)
 scrollbar.grid(row=0,column=2,rowspan=2, sticky=E+N+S, padx=(8,8), pady=(8,0))
 
@@ -133,6 +133,7 @@ scrollbar.config(command=text_field.yview)
 textentry.config(insertbackground="White")
 
 root.grid_rowconfigure(0, weight=1)
+root.grid_rowconfigure(1, weight=1)
 root.grid_columnconfigure(0, weight=1)
 root.grid_propagate(False)
 
