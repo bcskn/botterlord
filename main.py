@@ -15,9 +15,9 @@ print "Monitor Resolution: %s "%(screen_size)
 
 default_cursor_style = "dotbox"
 
-map_frame_height = screen_size["height"] #475
-bot_frame_height = screen_size["height"]/6#475
-bot_frame_width = screen_size["width"]/2.5 #900 # Also the map is bound to this tile thus == map_frame_width
+map_frame_height = screen_size["height"]/10 #475
+bot_frame_height = screen_size["height"]/10#475
+bot_frame_width = screen_size["width"]/3 #900 # Also the map is bound to this tile thus == map_frame_width
 
 window_minimum_height = screen_size["height"]/3
 window_minimum_width = screen_size["width"]/3
@@ -37,9 +37,6 @@ default_mp = 100
 default_loc = '10:44'
 #----------------------------------------------
 
-
-
-
 '''------Get Images------'''
 _icon_path = os.path.join(tools.get_path(),'images',icon_name) # Retrieve image from images folder.
 
@@ -48,6 +45,7 @@ conn = sqlite3.connect(os.path.join('data','botterlord.db'))
 db = conn.cursor()
 
 '''-----Variables-----'''
+global start
 start = 1.0 #Start Line
 fs_var = 0 #Fullscreen state
 real_input = ''
@@ -100,7 +98,7 @@ except: print "Can't get icon because of unknown reasons."
 root.minsize(window_minimum_width, window_minimum_height)
 root.configure(background=window_background_color)
 
-print platform.system()
+print "Operating System: ", platform.system()
 if platform.system() == "Windows":
     if root.state('zoomed') == False:
         root.state('zoomed')
@@ -152,10 +150,11 @@ def cursor_style(style):
 
 def tag_yellow(word):
     """Highlight text (UNKNOWN COMMAND)."""
+    global start;
     pos = text_field.search(word, start, stopindex = END)
     pos_start = float(pos)
     pos_end = pos_start+0.17
-    global start; start = pos_end
+    start = pos_en
     text_field.tag_add('tag_green', pos_start, pos_end)
     text_field.tag_config('tag_green', background='White', foreground='Black', font=('Helvetica', 12, 'bold'))
 
@@ -266,7 +265,7 @@ def setup_world(_input): # CREATE NEW WORLD, FILE NAME == WORLD NAME
     '''User is in the setting up stages and havent entered world name yet.'''
     global profile_name, name_entered, waiting_value, world_file
     profile_name = _input + '.yml'
-    print profile_name, '<-Profile name'
+    print "Profile Name: ", profile_name
     world_file = os.path.join(tools.get_path(),'worlds',profile_name)
     world_yml = open(world_file , 'w+') #--Open if profile exists; create if not
     yml_info = {'world_name':_input}
@@ -298,7 +297,7 @@ def try_execute_command(userinput0):
     parsing = userinput0
     parsing = parsing.split(' ')
 
-    print "printing >> try_execute_command > parsing:   ", parsing
+    print "(f)try_execute_command: ", parsing
 
     if started == False:
         """If the game is in the title screen"""
@@ -312,6 +311,7 @@ def try_execute_command(userinput0):
         '''Error message.'''
         text_field.insert(END, '\n')
         text_field.insert(END, ' UNKNOWN COMMAND ')
+        print "UNKNOWN COMMAND"
         tag_yellow(' UNKNOWN COMMAND ')
 
     else: #Execute command
