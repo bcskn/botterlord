@@ -1,5 +1,22 @@
 import os
+from screeninfo import get_monitors
 """Get self file path."""
+
+def get_monitor_size():
+    """Incidentally gets only the first given monitor, which we will assume
+    where the software is running at."""
+    for monitors in get_monitors():
+        screen_size = monitors
+        break
+    screen_size = str(screen_size)
+    print screen_size
+    crop_start = screen_size.find("(") + 1
+    crop_end = screen_size.find("+")
+    screen_size = screen_size[crop_start:crop_end]
+    screen_size = screen_size.split("x")
+    print screen_size
+    screen_size = {"width": int(screen_size[0]), "height": int(screen_size[1])}
+    return screen_size
 
 def get_path(filename = None):
     _path = os.path.realpath('main.py')

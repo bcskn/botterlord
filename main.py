@@ -1,32 +1,44 @@
-#!python
 # -*- coding: utf-8 -*-
 import os, sys, sqlite3, yaml, platform # Dependencies
 from Tkinter import *
+from screeninfo import get_monitors
 #-----------------------
-import cmd, botmap, world, npc, ymlr, tools
+import cmd, world, npc, ymlr, tools
 from texts import status
-#-------------------------------------------------------------------------------
-#KILL THE MAP !!!
-#-------------------------------------------------------------------------------
-'''------------Values--------------'''
-'''/Hardcoded/'''
+
+#----------------------------------------------DISPLAY SETTINGS
 topbar_name = 'BotterLord DEV Version'
 icon_name = 'Botter_logo.ico'  # Icon must be in .ico format.
 
-map_frame_height = 475 #475
-bot_frame_height = 475 #475
-bot_frame_width = 450 #900
+screen_size = tools.get_monitor_size()
+print "Monitor Resolution: %s "%(screen_size)
 
-window_minimum_height = 300
-window_minimum_width = 1000
+default_cursor_style = "dotbox"
+
+map_frame_height = screen_size["height"] #475
+bot_frame_height = screen_size["height"]/6#475
+bot_frame_width = screen_size["width"]/2.5 #900 # Also the map is bound to this tile thus == map_frame_width
+
+window_minimum_height = screen_size["height"]/3
+window_minimum_width = screen_size["width"]/3
 window_background_color = 'gray50'
+
+map_font = 'Lucida Console'
+main_font = 'Lucida Console'
+bot_font = 'Lucida Console'
+
 map_font_size = 13
 bot_font_size = 15
 main_font_size = 10
-#----------------------------------------------
+
+#----------------------------------------------DEFAULT INGAME VALUES
 default_hp = 100
 default_mp = 100
 default_loc = '10:44'
+#----------------------------------------------
+
+
+
 
 '''------Get Images------'''
 _icon_path = os.path.join(tools.get_path(),'images',icon_name) # Retrieve image from images folder.
@@ -46,8 +58,6 @@ bot_locs = []
 world_file = ''
 profile_name = '' # Loaded profile file and world name
 bots = {}
-bot_avatar = '<OO>' # Controlled bot sign
-np_bot_avatar = '<oo>' # Uncontrolled bot sign
 pc_name = '' # Name of the bot being controlled.
 pc_row = 10
 pc_col = 40
@@ -117,9 +127,10 @@ map_field.grid(sticky=W+E+N+S)
 textentry.grid(row=2,column=0,columnspan=3,sticky=E+W, padx = 8, pady = 8)
 scrollbar.grid(row=0,column=2,rowspan=2, sticky=E+N+S, padx=(8,8), pady=(8,0))
 
-text_field.config(insertbackground="White",yscrollcommand=scrollbar.set, borderwidth = 10, font=('Lucida Console', main_font_size, 'normal'))
-bot_field.config(insertbackground="White", borderwidth = 10, font=('Lucida Console', bot_font_size, 'normal'))
-map_field.config(insertbackground="White", borderwidth = 8, font=('Lucida Console', map_font_size, 'normal'))
+text_field.config(insertbackground="White",yscrollcommand=scrollbar.set, borderwidth = 10, \
+font=(main_font, main_font_size, 'normal'))
+bot_field.config(insertbackground="White", borderwidth = 10, font=(bot_font, bot_font_size, 'normal'))
+map_field.config(insertbackground="White", borderwidth = 8, font=(map_font, map_font_size, 'normal'))
 scrollbar.config(command=text_field.yview)
 textentry.config(insertbackground="White")
 
@@ -137,7 +148,7 @@ def cursor_style(style):
     scrollbar.config(cursor=style)
     textentry.config(cursor=style)
     root.config(cursor=style)
-cursor_style("dotbox")
+
 
 def tag_yellow(word):
     """Highlight text (UNKNOWN COMMAND)."""
@@ -316,9 +327,10 @@ def try_execute_command(userinput0):
         if legal_command == 'load': _load_()
         if legal_command == 'quit': root.quit()
         if legal_command == 'control': switch_bot(parsing[1])
-        if legal_command == 'show_mouse': cursor_style("dotbox")
+        if legal_command == 'show_mouse': cursor_style("dotbox") #Default
         if legal_command == 'hide_mouse': cursor_style("none")
         if legal_command == 'status': pass # Show current status
+        if legal_command == 'help': help_show()
 
 def mov_pc(_direction):
     """Relocate player/bot location based on given direction."""
@@ -332,7 +344,6 @@ def mov_pc(_direction):
 def prnt_mainfeed(p_row, p_col):
     """Inserts the node-state text to the main feed."""
     _addr = '%d:%d'  %(p_row, p_col)
-    envo_node = botmap.recog_node(_addr)
     npc_node = world.chcknode(_addr, 'NPC')
     adven_node = world.chcknode(_addr, 'ADVE')
     print "printing >> prnt_mainfeed, npc_node:  ", npc_node # Track message
@@ -347,8 +358,12 @@ def prnt_mainfeed(p_row, p_col):
                 \n%s \
                 \n%s \
                 \n--------------------------------"\
-                %(_addr, envo_node, npc_node, npc_idle, adven_node)
+                %(_addr, npc_node, npc_idle, adven_node)
     text_field.insert(END, node_msg)
+
+def help_show():
+    cmds = "\n%s"%(cmd.pc_commands)
+    text_field.insert(END, cmds)
 
 
 #-------------------------------------------------------------------------------
@@ -358,6 +373,8 @@ textentry.bind('<Up>', get_last_input)
 root.bind("<Button-1>", auto_setfocus)
 root.bind("<F11>", toggle_fullscreen)
 textentry.focus_force()
+
+cursor_style(default_cursor_style)
 
 '''Program Start'''
 text_field.insert(END, botter_title)
