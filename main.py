@@ -7,7 +7,8 @@ import cmd, world, npc, ymlr, tools
 from texts import status
 
 #----------------------------------------------DISPLAY SETTINGS
-topbar_name = 'BotterLord DEV Version'
+version_number = "Alpha0.1"
+topbar_name = 'BotterLord'
 icon_name = 'Botter_logo.ico'  # Icon must be in .ico format.
 
 screen_size = tools.get_monitor_size()
@@ -75,10 +76,10 @@ botter_title = """\
 ║ ██╔══██╗██║   ██║   ██║      ██║   ██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗██║  ██║ ║
 ║ ██████╔╝╚██████╔╝   ██║      ██║   ███████╗██║  ██║███████╗╚██████╔╝██║  ██║██████╔╝ ║
 ║ ╚═════╝  ╚═════╝    ╚═╝      ╚═╝   ╚══════╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝  ║
-╚══════════════════════════════════════════════════════════════════════════════════════╝ v_DEV
+╚══════════════════════════════════════════════════════════════════════════════════════╝
 """
 entry_message = """\
-\n Welcome to the BotterLord (dev version) \
+\n Welcome to BotterLord %s \
 \n                  \
 \n Insert a command \
 \n --------------- \
@@ -86,7 +87,7 @@ entry_message = """\
 \n Load\
 \n Quit\
 \n --------------- \
-"""
+"""%(version_number)
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
 '''----------------Window Setup----------------'''
@@ -164,9 +165,10 @@ def tag_yellow(word):
     pos = text_field.search(word, start, stopindex = END)
     pos_start = float(pos)
     pos_end = pos_start+0.17
-    start = pos_en
+    start = pos_end
     text_field.tag_add('tag_green', pos_start, pos_end)
-    text_field.tag_config('tag_green', background='White', foreground='Black', font=('Helvetica', 12, 'bold'))
+    text_field.tag_config('tag_green', background='White', foreground='Black', \
+    font=(main_font,main_font_size,'bold'))
 
 def auto_setfocus(event):
     """Prevent clicking away from text entry."""
@@ -211,17 +213,15 @@ def _start_1():
     print 'start sequence 1' #Debug msg
     started = True
 
-
-def _load_():
+def _load_(): #UNDER CONSTRUCTION
     """Choose already existing yml file to set as profile_name."""
     pass
 
-def save_state():
+def save_state(): #UNDER CONSTRUCTION
     #print 'func: Save state'
     pass #--------------------------- Load data into profile yml file
     #ymlr.enter_data('')
     root.after(1000, save_state)
-root.after(1000, save_state) # Initiate save loop
 
 class Bot:
     def __init__(self, namebot, hp, mp, loc):
@@ -251,7 +251,7 @@ def enterpressed(event):
     text_field.insert(END, '\n>') #----------Echo
     text_field.insert(END, userinput) #----------Echo
     text_field.update()
-    textentry.delete(0, END)
+    textentry.delete(0, END) #Clear the text entry field.
 
     global waiting_value, name_entered, last_input, real_input, real_parsed
     if waiting_value == False:
@@ -262,45 +262,31 @@ def enterpressed(event):
             try_execute_command(userinput)
             last_input = userinput
     else: #------------------------------------> Program is waiting for a value.
-        parsing = userinput
-        parsing = parsing.split(' ')
-        if parsing[0] != '': #-----------If it's not empty.
-            if name_entered == False:
-                setup_world(userinput) # Setup a new world
-                waiting_value = False
+        setup_world(userinput)
+
     text_field.see('end') #---------------Autoscroll down
     print '>>', userinput #Debug
 
-def setup_world(_input): # CREATE NEW WORLD, FILE NAME == WORLD NAME
+def setup_world(_input): # OBSOLETE --- REFACTOR
     '''User is in the setting up stages and havent entered world name yet.'''
     global profile_name, name_entered, waiting_value, world_file
-    profile_name = _input + '.yml'
-    print "Profile Name: ", profile_name
-    world_file = os.path.join(tools.get_path(),'worlds',profile_name)
-    world_yml = open(world_file , 'w+') #--Open if profile exists; create if not
-    yml_info = {'world_name':_input}
-    ymlr.insert(yml_info, world_file)
-    name_entered = True
-    waiting_value = False
-    _start_1()
+
+    if _input != '': #-----------If it's not empty.
+        if name_entered == False:
+            profile_name = _input + '.yml'
+            print "Profile Name: ", profile_name
+            world_file = os.path.join(tools.get_path(),'worlds',profile_name)
+            world_yml = open(world_file , 'w+') #--Open if profile exists; create if not
+            yml_info = {'world_name':_input}
+            ymlr.insert(yml_info, world_file)
+            name_entered = True
+            waiting_value = False
+            _start_1()
 
 def get_last_input(event):
     """Re-enter last returned command into textentry."""
     global last_input
     textentry.insert(END, last_input)
-
-def switch_bot(switch_to):
-    """Control another Bot."""
-    global pc_row, pc_col, pc_name, world_file
-    ymlr.internal_data(world_file, 'in', "%d:%d"%(pc_row, pc_col), pc_name, 'location')
-
-    botname = 'bot_' + switch_to
-    bot_data = ymlr.get_data(botname, world_file)
-    parse_loc = tools.parse_str_loc(bot_data['loc'])
-    pc_row = parse_loc[0]; pc_col = parse_loc[1]
-    pc_row = int(pc_row); pc_col = int(pc_col)
-    pc_name = botname
-    print "printing >> switch_bot > pc_row, pc_col, bot_data:   ",pc_row, pc_col , bot_data
 
 def try_execute_command(userinput0):
     """Parse and execute entered command."""
@@ -329,10 +315,6 @@ def try_execute_command(userinput0):
             global real_parsed
             create_bot(real_parsed[2]) #----------------->Change
 
-        if (legal_command == 'north' or legal_command == 'south'
-        or legal_command == 'east' or legal_command == 'west'):
-            mov_pc(legal_command)
-
         if legal_command == 'start': _start_0()
         if legal_command == 'load': _load_()
         if legal_command == 'quit': root.quit()
@@ -341,14 +323,6 @@ def try_execute_command(userinput0):
         if legal_command == 'hide_mouse': cursor_style("none")
         if legal_command == 'status': pass # Show current status
         if legal_command == 'help': help_show()
-
-def mov_pc(_direction):
-    """Relocate player/bot location based on given direction."""
-    global pc_row, pc_col
-    if _direction == 'north': pc_row -= 1
-    if _direction == 'south': pc_row += 1
-    if _direction == 'east': pc_col += 4
-    if _direction == 'west': pc_col -= 4
 
 
 def prnt_mainfeed(p_row, p_col):
@@ -389,14 +363,10 @@ cursor_style(default_cursor_style)
 '''Program Start'''
 text_field.insert(END, botter_title)
 text_field.insert(END, entry_message)
+root.after(1000, save_state) # Initiate save loop
 
 
 '''Tests'''
-setup_world('profile')
-world.store_bot_location(world_file)
-#root.after(500, scale_font_size) # Needs time
-#switch_bot("testbot2")
-update_botfield()
 test_text = """\
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
@@ -410,8 +380,8 @@ JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
 KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
 LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
 """
-#bot_field.insert(END, test_text)
-#map_field.insert(END, test_text)
+bot_field.insert(END, test_text)
+map_field.insert(END, test_text)
 text_field.insert(END, test_text)
 
 

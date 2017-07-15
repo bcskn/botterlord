@@ -1,2 +1,6 @@
+bot_testerrbot:
+  energy: 100
+  health: 100
+  location: '10:40'
 locations: []
 world_name: profile
