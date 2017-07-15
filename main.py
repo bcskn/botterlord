@@ -23,12 +23,12 @@ window_minimum_height = screen_size["height"]/3
 window_minimum_width = screen_size["width"]/3
 window_background_color = 'gray50'
 
-map_font = 'Lucida Console'
-main_font = 'Lucida Console'
-bot_font = 'Lucida Console'
+map_font = 'Courier New'
+main_font = 'Courier New'
+bot_font = 'Courier New'
 
 map_font_size = 13
-bot_font_size = 15
+bot_font_size = 13
 main_font_size = 10
 
 #----------------------------------------------DEFAULT INGAME VALUES
@@ -108,26 +108,34 @@ else: root.attributes('-fullscreen', True) # If not windows automatically switch
 
 
 #Relief is for widget "style"
-map_frame = Frame(root,bg = "Black",relief=FLAT, height=map_frame_height, width=side_frame_width)
+main_frame = Frame(root,bg = "Black",relief=FLAT)
 bot_frame = Frame(root,bg = "Black",relief=FLAT, height=bot_frame_height, width=side_frame_width)
-text_field = Text(root,bg = "Black", fg="White",relief=FLAT)
+map_frame = Frame(root,bg = "Black",relief=FLAT, height=map_frame_height, width=side_frame_width)
+
+main_frame.grid(row=0,column=0,rowspan=2,sticky=W+E+N+S, padx = (8, 8), pady = (8, 0))
+bot_frame.grid(row=0, column=1, sticky=W+E+N+S, pady=(8,8))
+map_frame.grid(row=1, column=1, sticky=W+E+N+S, cursor=None)
+main_frame.grid_propagate(False)
+map_frame.grid_propagate(False)
+bot_frame.grid_propagate(False)
+
+text_field = Text(main_frame,bg = "Black", fg="White",relief=FLAT)
 bot_field = Text(bot_frame,bg = "Black", fg="White",relief=FLAT)
 map_field = Text(map_frame,bg = "Black", fg="White",relief=FLAT)
 textentry = Entry(root, bg = "Black", fg = "White", relief=FLAT)
 scrollbar = Scrollbar(root, bg = "Black", relief=FLAT)
 
-map_frame.grid(row=1, column=1, sticky=W+E+N+S, cursor=None)
-bot_frame.grid(row=0, column=1, sticky=W+E+N+S, pady=(8,8))
-map_frame.grid_propagate(False)
-bot_frame.grid_propagate(False)
+text_field.pack(fill=BOTH, expand=1)
+bot_field.place(rely=0, relx=0,relwidth=1, relheight=1, anchor=NW)
+map_field.place(rely=0, relx=0,relwidth=1, relheight=1, anchor=NW)
 
-text_field.grid(row=0,column=0,rowspan=2,sticky=W+E+N+S, padx = (8, 8), pady = (8, 0))
+
 textentry.grid(row=2,column=0,columnspan=3,sticky=E+W, padx = 8, pady = 8)
 scrollbar.grid(row=0,column=2,rowspan=2, sticky=E+N+S, padx=(8,8), pady=(8,0))
 
-text_field.config(insertbackground="White",yscrollcommand=scrollbar.set, borderwidth = 10, \
+text_field.config(insertbackground="White",yscrollcommand=scrollbar.set, wrap=WORD, borderwidth = 10, \
 font=(main_font, main_font_size, 'normal'))
-bot_field.config(insertbackground="White", borderwidth = 10, font=(bot_font, bot_font_size, 'normal'))
+bot_field.config(insertbackground="White", borderwidth = 8, font=(bot_font, bot_font_size, 'normal'))
 map_field.config(insertbackground="White", borderwidth = 8, font=(map_font, map_font_size, 'normal'))
 scrollbar.config(command=text_field.yview)
 textentry.config(insertbackground="White")
@@ -135,7 +143,8 @@ textentry.config(insertbackground="White")
 root.grid_rowconfigure(0, weight=1)
 root.grid_rowconfigure(1, weight=1)
 root.grid_columnconfigure(0, weight=1)
-root.grid_propagate(False)
+root.grid_columnconfigure(1, weight=1)
+#root.grid_propagate(False)
 
 
 #-------------------------------------------------------------------------------
@@ -385,8 +394,26 @@ text_field.insert(END, entry_message)
 '''Tests'''
 setup_world('profile')
 world.store_bot_location(world_file)
-root.after(500, scale_font_size) # Needs time
+#root.after(500, scale_font_size) # Needs time
 #switch_bot("testbot2")
 update_botfield()
+test_text = """\
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
+KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
+LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+"""
+#bot_field.insert(END, test_text)
+#map_field.insert(END, test_text)
+text_field.insert(END, test_text)
+
+
 #-------------------------------------------------------------------------------
 root.mainloop() #Gui Programs need a loop to stay on the screen.
