@@ -1,4 +1,4 @@
-import os
+import os, platform
 from screeninfo import get_monitors
 """Get self file path."""
 
@@ -17,13 +17,24 @@ def get_monitor_size():
     return screen_size
 
 def get_path(filename = None):
+    if platform.system() == "Windows":
+        separator = "\\"
+    else:
+        separator = "/"
+    try:
+        filename = filename.split('/') #For in code expressions
+    except:
+        pass
     _path = os.path.realpath('main.py')
     _lenpath = len(_path)
-    _lenpath -= 7
+    _lenpath -= 8
     _path = _path[:_lenpath]
-    if filename != None:
-        _path = _path + filename
+    for i in filename:
+        if i != None:
+            _path = _path + separator + i
     return _path
+#Test
+print get_path("texts/botter_title.txt")
 
 def parse_str_loc(strloc):
     strloc = strloc.split(':')

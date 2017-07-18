@@ -6,3 +6,5 @@ README.md
 index.html
 javascripts
 stylesheets
+data/OBSOLETE_worldmap.txt
+worlds/*.yml

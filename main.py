@@ -68,6 +68,7 @@ waiting_value = False
 name_entered = False
 last_input = '' # The last entered command
 
+
 botter_title = """\
 ╔══════════════════════════════════════════════════════════════════════════════════════╗
 ║ ██████╗  ██████╗ ████████╗████████╗███████╗██████╗ ██╗      ██████╗ ██████╗ ██████╗  ║
@@ -145,7 +146,6 @@ root.grid_rowconfigure(0, weight=1)
 root.grid_rowconfigure(1, weight=1)
 root.grid_columnconfigure(0, weight=1)
 root.grid_columnconfigure(1, weight=1)
-#root.grid_propagate(False)
 
 
 #-------------------------------------------------------------------------------
@@ -195,23 +195,19 @@ def scale_font_size():
 
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
-def _start_0():
-    '''First phase of start, entering world information.'''
-    text_field.insert(END, '\nPlease enter world name:')
-    global waiting_value; waiting_value = True
-    print 'start sequence 0' #Debug msg
+class main_menu:
+    def __init__(self, title, menu_text):
+        self.title = title
+        self.menu_text = menu_text
 
-def _start_1():
-    global started, pc_row, pc_col
-    intro_story = """\n\
-    \nWorld name: %s \
-    \n<PLACE HOLDER TEXT> \
-    """%(profile_name)
+    def _print(self):
+        text_field.delete((0.0), END)
+        text_field.insert(END, self.title)
+        text_field.insert(END, self.menu_text)
 
-    text_field.insert(END, intro_story)
+    def _start():
+        text_field.insert(END, 0)
 
-    print 'start sequence 1' #Debug msg
-    started = True
 
 def _load_(): #UNDER CONSTRUCTION
     """Choose already existing yml file to set as profile_name."""
@@ -253,16 +249,13 @@ def enterpressed(event):
     text_field.update()
     textentry.delete(0, END) #Clear the text entry field.
 
-    global waiting_value, name_entered, last_input, real_input, real_parsed
-    if waiting_value == False:
-        real_input = userinput
-        real_parsed = real_input.split(' ')
-        userinput = userinput.lower()
-        if userinput != '':
-            try_execute_command(userinput)
-            last_input = userinput
-    else: #------------------------------------> Program is waiting for a value.
-        setup_world(userinput)
+    global last_input, real_input, real_parsed
+    real_input = userinput
+    real_parsed = real_input.split(' ')
+    userinput = userinput.lower()
+    if userinput != '':
+        try_execute_command(userinput)
+        last_input = userinput
 
     text_field.see('end') #---------------Autoscroll down
     print '>>', userinput #Debug
@@ -310,7 +303,7 @@ def try_execute_command(userinput0):
         print "UNKNOWN COMMAND"
         tag_yellow(' UNKNOWN COMMAND ')
 
-    else: #Execute command
+    else: #--------------------------------------------------EXECUTE COMMAND
         if legal_command == 'create' and parsing[1] == 'bot':
             global real_parsed
             create_bot(real_parsed[2]) #----------------->Change
@@ -325,7 +318,7 @@ def try_execute_command(userinput0):
         if legal_command == 'help': help_show()
 
 
-def prnt_mainfeed(p_row, p_col):
+def prnt_mainfeed(p_row, p_col): #------------OBSOLETE
     """Inserts the node-state text to the main feed."""
     _addr = '%d:%d'  %(p_row, p_col)
     npc_node = world.chcknode(_addr, 'NPC')
@@ -356,14 +349,14 @@ textentry.bind('<Return>', enterpressed)
 textentry.bind('<Up>', get_last_input)
 root.bind("<Button-1>", auto_setfocus)
 root.bind("<F11>", toggle_fullscreen)
+root.after(1000, save_state) # Initiate save loop
 textentry.focus_force()
 
 cursor_style(default_cursor_style)
 
 '''Program Start'''
-text_field.insert(END, botter_title)
-text_field.insert(END, entry_message)
-root.after(1000, save_state) # Initiate save loop
+start_screen = main_menu(botter_title, entry_message)
+start_screen._print()
 
 
 '''Tests'''
