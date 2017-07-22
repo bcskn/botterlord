@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="D:/Programs/repo/Srs.Bot-Website/stylesheets/markdown.css" media="screen">
+  <link rel="stylesheet" href="stylesheets/markdown.css" media="screen">
 </head>
 
 <body>
