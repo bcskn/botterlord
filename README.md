@@ -2,13 +2,13 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="stylesheets/markdown.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="stylesheets/markdown.css" media="screen">
 </head>
 
 <body>
   <!---------------------------------------------------------------------------------------------------------------------------------------->
   <div class="markdown_page">
-    <h1 class="markdown_title">BotterLord </h1>
+    <p class="markdown_title">BotterLord </p>
     <p class="markdown_text">
       <br> My personal side project that was inspired by *TIS-100, EmpireMud and Overlord Novels by Kugane Maruyama.* <br>
       <br> The plan is to create a DOS inspired retro castle management/strategy game where you personally will be responsible for the Npc's AIs, and hopefully a lot more.<br>
