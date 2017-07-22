@@ -1,3 +1,10 @@
+<!doctype html> 
+<html>
+
+<head>
+</head>
+<body>
+<!---------------------------------------------------------------------------------------------------------------------------------------->
 <h1> BotterLord </h1>
 <p>
 My personal side project that was inspired by *TIS-100, EmpireMud and Overlord Novels by Kugane Maruyama.* <br>
@@ -17,3 +24,8 @@ The reasons for purging the map idea was because it wasn't really going along wi
   <li> Clean up zombie codes. </li>
   <li> Set up json/yaml/Sqlite(?choose) sheet for profile saves. </li>
 </ul>
+<!---------------------------------------------------------------------------------------------------------------------------------------->
+
+</body>
+
+</html>
