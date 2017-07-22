@@ -19,10 +19,11 @@
     <img class=screenshot src="https://raw.githubusercontent.com/Marchearth/BotterLord/master/images/_botScreen.png">
     <br>
 
-    <h2> Road Map: </h2>
+    <p class=markdown_list_title> Road Map: </p>
     <ul style="list-style-type:square">
       <li> Clean up zombie codes. </li>
       <li> Set up json/yaml/Sqlite(?choose) sheet for profile saves. </li>
+      
     </ul>
   </div>
   <!---------------------------------------------------------------------------------------------------------------------------------------->
