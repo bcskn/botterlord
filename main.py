@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-import os, sys, sqlite3, yaml, platform # Dependencies
+import os, sys, yaml, platform # Dependencies -sqlite3
 from Tkinter import *
 from screeninfo import get_monitors
 #-----------------------
-import cmd, world, npc, ymlr, tools
+import cmd, ymlr, tools
 from texts import status
 
 #----------------------------------------------DISPLAY SETTINGS
@@ -43,8 +43,8 @@ default_loc = '10:44'
 _icon_path = os.path.join(tools.get_path(),'images',icon_name) # Retrieve image from images folder.
 
 '''-----Connect to the Database-----'''
-conn = sqlite3.connect(os.path.join('data','botterlord.db'))
-db = conn.cursor()
+#conn = sqlite3.connect(os.path.join('data','botterlord.db'))
+#db = conn.cursor()
 
 '''-----Variables-----'''
 global start
@@ -317,9 +317,10 @@ def try_execute_command(userinput0):
         if legal_command == 'status': pass # Show current status
         if legal_command == 'help': help_show()
 
-
 def prnt_mainfeed(p_row, p_col): #------------OBSOLETE
     """Inserts the node-state text to the main feed."""
+    pass
+    """
     _addr = '%d:%d'  %(p_row, p_col)
     npc_node = world.chcknode(_addr, 'NPC')
     adven_node = world.chcknode(_addr, 'ADVE')
@@ -337,7 +338,7 @@ def prnt_mainfeed(p_row, p_col): #------------OBSOLETE
                 \n--------------------------------"\
                 %(_addr, npc_node, npc_idle, adven_node)
     text_field.insert(END, node_msg)
-
+"""
 def help_show():
     cmds = "\n%s"%(cmd.pc_commands)
     text_field.insert(END, cmds)

@@ -17,6 +17,7 @@ def get_monitor_size():
     return screen_size
 
 def get_path(filename = None):
+    print type(platform.system())
     if platform.system() == "Windows":
         separator = "\\"
     else:
@@ -29,12 +30,11 @@ def get_path(filename = None):
     _lenpath = len(_path)
     _lenpath -= 8
     _path = _path[:_lenpath]
-    for i in filename:
-        if i != None:
-            _path = _path + separator + i
+    if filename != None:
+        for i in filename:
+            if i != None:
+                _path = _path + separator + i
     return _path
-#Test
-print get_path("texts/botter_title.txt")
 
 def parse_str_loc(strloc):
     strloc = strloc.split(':')

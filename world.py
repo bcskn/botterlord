@@ -80,7 +80,8 @@ def store_bot_location(filename): # WHYYYYYYY
 
 def create_bot(worldfile, namebot, hp = default_hp, mp = default_mp, loc = default_loc):
     """Check if bot with the same name exists."""
-    stream = open(worldfile, 'r')
+    _path = tools.get_path(worldfile)
+    stream = open(_path, 'r')
     prof = yaml.load(stream)
     torf = "bot_" + namebot in prof
     if torf == False:
@@ -91,5 +92,3 @@ def create_bot(worldfile, namebot, hp = default_hp, mp = default_mp, loc = defau
     else: return "exists"
 
     """Record bot in yaml file."""
-
-create_bot(worldfile = "worlds/profile.yml", namebot = "testerrbot")
