@@ -288,7 +288,7 @@ def try_execute_command(userinput0):
 
     print "(f)try_execute_command: ", parsing
 
-    if started == False:
+    if started == True:
         """If the game is in the title screen"""
         menu_commands = ['start', 'load', 'quit']
         legal_command = cmd.find_command(parsing[0], menu_commands)
