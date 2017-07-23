@@ -1,0 +1,4 @@
+Tkinter
+platform
+PyYAML
+screeninfo
