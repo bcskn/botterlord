@@ -1,4 +1,3 @@
-Tkinter
-platform
-PyYAML
-screeninfo
+BotterLord
+PyYAML==3.12
+screeninfo==0.3
