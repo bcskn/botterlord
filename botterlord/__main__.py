@@ -204,8 +204,8 @@ class main_menu:
         text_field.insert(END, self.title)
         text_field.insert(END, self.menu_text)
 
-    def _start():
-        text_field.insert(END, 0)
+    def _start(self):
+        text_field.insert(END, "\nSTART MESSAGE") #How to wait for a value the right way ?
 
 
 def _load_(): #UNDER CONSTRUCTION
@@ -307,7 +307,7 @@ def try_execute_command(userinput0):
             global real_parsed
             create_bot(real_parsed[2]) #----------------->Change
 
-        if legal_command == 'start': _start_0()
+        if legal_command == 'start': start_screen._start()
         if legal_command == 'load': _load_()
         if legal_command == 'quit': root.quit()
         if legal_command == 'control': switch_bot(parsing[1])
