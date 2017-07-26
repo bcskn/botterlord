@@ -53,13 +53,7 @@ real_input = ''
 real_parsed = ''
 bot_locs = []
 
-'''----- Variables stored in profile (yaml) file-----'''
-world_file = ''
-profile_name = '' # Loaded profile file and world name
-bots = {}
-pc_name = '' # Name of the bot being controlled.
-pc_row = 10
-pc_col = 40
+print ymlr.retrieve(tools.get_path("texts/texts.yml"))
 
 #---------------------------------------------
 started = False #In title screen

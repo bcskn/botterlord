@@ -1,5 +1,6 @@
 import os, platform
 from screeninfo import get_monitors
+from pathlib import *
 """Get self file path."""
 
 def get_monitor_size():
@@ -17,7 +18,6 @@ def get_monitor_size():
     return screen_size
 
 def get_path(filename = None):
-    print type(platform.system())
     if platform.system() == "Windows":
         separator = "\\"
     else:
@@ -26,34 +26,15 @@ def get_path(filename = None):
         filename = filename.split('/') #For in code expressions
     except:
         pass
-    _path = os.path.realpath('main.py')
-    _lenpath = len(_path)
-    _lenpath -= 8
-    _path = _path[:_lenpath]
+    _path = Path.cwd()
+
     if filename != None:
         for i in filename:
             if i != None:
-                _path = _path + separator + i
+                _path = PurePath(_path, i)
     return _path
+print get_path("texts/texts.yml")
 
 def parse_str_loc(strloc):
     strloc = strloc.split(':')
     return strloc[0], strloc[1]
-
-def fit_title(size):
-    title = ""
-    if size < 1920:
-        title = """\
-         ____        _   _            _                  _
-        | __ )  ___ | |_| |_ ___ _ __| |    ___  _ __ __| |
-        |  _ \ / _ \| __| __/ _ \ '__| |   / _ \| '__/ _` |
-        | |_) | (_) | |_| ||  __/ |  | |__| (_) | | | (_| |
-        |____/ \___/ \__|\__\___|_|  |_____\___/|_|  \__,_|
-        """
-    if size < 1600:
-        title = """\
-        _
-        |_) _ _|__|_ _  __|   _  __ _|
-        |_)(_) |_ |_(/_ | |__(_) | (_|
-        """
-    return title

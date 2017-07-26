@@ -1,9 +1,14 @@
 # -*- coding: utf-8 -*-
 from setuptools import setup
 
+def readme():
+    with open('README.rst') as f:
+        return f.read()
+
 setup(name='botterlord',
       version='0.1',
       description='Retro styled strategy rpg.',
+      long_description=readme(),
       url='http://github.com/Marchearth/',
       author='Buğra Coşkun',
       author_email='mentalnerd1@gmail.com',
@@ -11,6 +16,9 @@ setup(name='botterlord',
       packages=['botterlord'],
       install_requires=[
           'PyYaml',
-          'screeninfo'
+          'screeninfo',
+          'pathlib'
       ],
-      zip_safe=False)
+      zip_safe=False,
+      test_suite='pytest',
+      tests
