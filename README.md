@@ -16,7 +16,7 @@
       <br> The reasons for purging the map idea was because it wasn't really going along with the main mechanic of the game which is micromanagement, while also taking a lot of time and effort to make it work like it should. And thus I decided that it
       would be better to make a great game with less fancy mechanics than a game with tons of barely working mechanics.<br>
     </p>
-    <img class=screenshot src="https://raw.githubusercontent.com/Marchearth/BotterLord/master/images/_botScreen.png">
+    <img class=screenshot src="https://raw.githubusercontent.com/Marchearth/BotterLord/master/botterlord/images/_botScreen.png">
     <br>
 
     <p class=markdown_list_title> Road Map: </p>
