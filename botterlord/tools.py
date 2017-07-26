@@ -32,7 +32,9 @@ def get_path(filename = None):
         for i in filename:
             if i != None:
                 _path = PurePath(_path, i)
+    _path = str(_path)
     return _path
+
 print get_path("texts/texts.yml")
 
 def parse_str_loc(strloc):
