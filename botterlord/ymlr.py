@@ -1,9 +1,14 @@
 import yaml, tools
 
+#def retrieve(filename):
+#    with open(filename, 'r') as file_descriptor:
+#        yml_data = yaml.load(file_descriptor)
+#    return yml_data
 def retrieve(filename):
-    with open(filename, 'r') as file_descriptor:
-        yml_data = yaml.load(file_descriptor)
-    return yml_data
+    stream = file(filename, 'r')
+    data = yaml.load(stream)
+    return yaml.dump(data, encoding=('utf-8'), default_flow_style=False, allow_unicode=True)
+
 
 def insert(data, filename):
     with open(filename, 'w') as yaml_file:

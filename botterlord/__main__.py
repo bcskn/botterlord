@@ -39,7 +39,7 @@ default_loc = '10:44'
 
 
 '''------Get Images------'''
-_icon_path = os.path.join(tools.get_path(),'images',icon_name) # Retrieve image from images folder.
+_icon_path = tools.get_path("images/botter_logo.ico") # Retrieve image from images folder.
 
 '''-----Connect to the Database-----'''
 #conn = sqlite3.connect(os.path.join('data','botterlord.db'))
@@ -53,7 +53,14 @@ real_input = ''
 real_parsed = ''
 bot_locs = []
 
-print ymlr.retrieve(tools.get_path("texts/texts.yml"))
+#tools.get_path path for texts.yml works on runscript package for atom
+#but it doesn't work with cmd python command on windows 10, didn't test on
+#different operating systems.
+try:
+    retrieved = ymlr.retrieve(tools.get_path("texts/texts.yml"))
+except:
+    retrieved = ymlr.retrieve('../texts/texts.yml')
+print retrieved
 
 #---------------------------------------------
 started = False #In title screen

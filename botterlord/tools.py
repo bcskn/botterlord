@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os, platform
 from screeninfo import get_monitors
 from pathlib import *
