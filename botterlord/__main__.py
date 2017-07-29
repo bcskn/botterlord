@@ -49,25 +49,23 @@ _icon_path = tools.get_path("images/botter_logo.ico") # Retrieve image from imag
 global start
 start = 1.0 #Start Line
 fs_var = 0 #Fullscreen state
-real_input = ''
-real_parsed = ''
+input_log = []
 bot_locs = []
 
 #tools.get_path path for texts.yml works on runscript package for atom
 #but it doesn't work with cmd python command on windows 10, didn't test on
 #different operating systems.
-title_path = tools.get_path("texts/texts.yml")
+texts_path = tools.get_path("texts/texts.yml")
 try:
-    retrieved = ymlr.retrieve(title_path)
+    retrieved = ymlr.retrieve('title', texts_path)
 except:
-    retrieved = ymlr.retrieve(title_path)
+    retrieved = ymlr.retrieve('title', texts_path)
 print retrieved
 
 #---------------------------------------------
 started = False #In title screen
 waiting_value = False
 name_entered = False
-last_input = '' # The last entered command
 
 entry_message = """\
 \n Welcome to BotterLord %s \
@@ -195,8 +193,17 @@ class main_menu:
         text_field.insert(END, self.title)
         text_field.insert(END, self.menu_text)
 
-    def _start(self):
-        text_field.insert(END, "\nSTART MESSAGE") #How to wait for a value the right way ?
+    def start_message(self):
+        text_field.insert(END, "\nSTART MESSAGE PLACEHOLDER") #How to wait for a value the right way ?
+
+    def load_message(self):
+        text_field.insert(END, "\nLOAD MESSAGE PLACEHOLDER")
+        pass # Do the loading here.
+
+    def quit_question(self):
+        text_field.insert(END, "\nAre you sure you want to quit ?")
+        pass # Doesn't really have anything left to do, all the quitting will be done
+        # in the try_execute_command section when the last input is quit.
 
 
 def _load_(): #UNDER CONSTRUCTION
@@ -239,13 +246,14 @@ def enterpressed(event):
     text_field.update()
     textentry.delete(0, END) #Clear the text entry field.
 
-    global last_input, real_input, real_parsed
-    real_input = userinput
-    real_parsed = real_input.split(' ')
+    global input_log, real_input, real_parsed
     userinput = userinput.lower()
-    if userinput != '':
-        try_execute_command(userinput)
-        last_input = userinput
+    real_parsed = userinput.split(' ') #Split the input into tokens, globally accessible list
+    if real_parsed[0] != '': #If returned text is not empty.
+        input_log.append(userinput) # Store input on log
+        print input_log
+        try_execute_command(real_parsed) # Try to execute the first word on the input.
+
 
     text_field.see('end') #---------------Autoscroll down
     print '>>', userinput #Debug
@@ -266,27 +274,25 @@ def setup_world(_input): # OBSOLETE --- REFACTOR
             waiting_value = False
             _start_1()
 
-def get_last_input(event):
+def get_input_log(event):
     """Re-enter last returned command into textentry."""
-    global last_input
-    textentry.insert(END, last_input)
+    global input_log
+    textentry.insert(END, input_log)
 
-def try_execute_command(userinput0):
+def try_execute_command(returned):
+    global input_log
     """Parse and execute entered command."""
-    parsing = userinput0
-    parsing = parsing.split(' ')
 
-    print "(f)try_execute_command: ", parsing
+    print "(f)try_execute_command: ", returned
+    legal_command = cmd.find_command(returned[0])
+    print legal_command
 
-    if started == True:
-        """If the game is in the title screen"""
-        menu_commands = ['start', 'load', 'quit']
-        legal_command = cmd.find_command(parsing[0], menu_commands)
-        print "printing >> try_execute_command > legal_command:  ",legal_command # Track message
+    if len(input_log) != 0:
+        last_item = len(input_log) - 1
+    else: last_item = 0
 
-    else : legal_command = cmd.find_command(parsing[0])
-
-    if legal_command == None:
+    if legal_command == None and input_log[last_item] != 'start' or \
+    input_log[last_item] != 'load' or input_log[last_item] != 'quit':
         '''Error message.'''
         text_field.insert(END, '\n')
         text_field.insert(END, ' UNKNOWN COMMAND ')
@@ -294,13 +300,28 @@ def try_execute_command(userinput0):
         tag_yellow(' UNKNOWN COMMAND ')
 
     else: #--------------------------------------------------EXECUTE COMMAND
+
+        if input_log[last_item] == 'start':
+            pass # Start a world with returned[1]
+
+        if input_log[last_item] == 'load':
+            pass # Load a world with returned[1]
+
+        if input_log[last_item] == 'quit':
+            # Quit game if returned[1] is yes, or don't do anything if it was no or else.
+            if returned[1] == 'yes':
+                root.quit()
+            else:
+                pass # Don't really do anything
+
         if legal_command == 'create' and parsing[1] == 'bot':
             global real_parsed
             create_bot(real_parsed[2]) #----------------->Change
 
-        if legal_command == 'start': start_screen._start()
-        if legal_command == 'load': _load_()
-        if legal_command == 'quit': root.quit()
+        if legal_command == 'start': start_screen.start_message() # Start message
+        if legal_command == 'load': start_screen.load_message() # Load message
+        if legal_command == 'quit': start_screen.quit_question() # Quit question
+
         if legal_command == 'control': switch_bot(parsing[1])
         if legal_command == 'show_mouse': cursor_style("dotbox") #Default
         if legal_command == 'hide_mouse': cursor_style("none")
@@ -337,7 +358,7 @@ def help_show():
 #-------------------------------------------------------------------------------
 #---------------------------Bind-Events-----------------------------------------
 textentry.bind('<Return>', enterpressed)
-textentry.bind('<Up>', get_last_input)
+textentry.bind('<Up>', get_input_log)
 root.bind("<Button-1>", auto_setfocus)
 root.bind("<F11>", toggle_fullscreen)
 root.after(1000, save_state) # Initiate save loop
@@ -351,19 +372,7 @@ start_screen._print()
 
 
 '''Tests'''
-test_text = """\
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
-EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
-FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
-HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
-JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
-KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
-LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
-"""
+test_text = ymlr.retrieve('test_text', texts_path)
 bot_field.insert(END, test_text)
 map_field.insert(END, test_text)
 text_field.insert(END, test_text)
