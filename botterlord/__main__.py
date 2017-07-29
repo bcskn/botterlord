@@ -29,7 +29,7 @@ bot_font = 'Courier New'
 
 map_font_size = 13
 bot_font_size = 13
-main_font_size = 10
+main_font_size = 9
 
 #----------------------------------------------DEFAULT INGAME VALUES
 default_hp = 100
@@ -56,10 +56,11 @@ bot_locs = []
 #tools.get_path path for texts.yml works on runscript package for atom
 #but it doesn't work with cmd python command on windows 10, didn't test on
 #different operating systems.
+title_path = tools.get_path("texts/texts.yml")
 try:
-    retrieved = ymlr.retrieve(tools.get_path("texts/texts.yml"))
+    retrieved = ymlr.retrieve(title_path)
 except:
-    retrieved = ymlr.retrieve('../texts/texts.yml')
+    retrieved = ymlr.retrieve(title_path)
 print retrieved
 
 #---------------------------------------------
@@ -68,17 +69,6 @@ waiting_value = False
 name_entered = False
 last_input = '' # The last entered command
 
-
-botter_title = """\
-╔══════════════════════════════════════════════════════════════════════════════════════╗
-║ ██████╗  ██████╗ ████████╗████████╗███████╗██████╗ ██╗      ██████╗ ██████╗ ██████╗  ║
-║ ██╔══██╗██╔═══██╗╚══██╔══╝╚══██╔══╝██╔════╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔══██╗ ║
-║ ██████╔╝██║   ██║   ██║      ██║   █████╗  ██████╔╝██║     ██║   ██║██████╔╝██║  ██║ ║
-║ ██╔══██╗██║   ██║   ██║      ██║   ██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗██║  ██║ ║
-║ ██████╔╝╚██████╔╝   ██║      ██║   ███████╗██║  ██║███████╗╚██████╔╝██║  ██║██████╔╝ ║
-║ ╚═════╝  ╚═════╝    ╚═╝      ╚═╝   ╚══════╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝  ║
-╚══════════════════════════════════════════════════════════════════════════════════════╝
-"""
 entry_message = """\
 \n Welcome to BotterLord %s \
 \n                  \
@@ -184,13 +174,13 @@ def toggle_fullscreen(event):
 
 def scale_font_size():
     print text_field.winfo_width()
-    global main_font_size, botter_title
+    global main_font_size
     pixel_ratio = 0.01
     main_font_size = int(text_field.winfo_width()*pixel_ratio) + \
     (text_field.winfo_width() % pixel_ratio > 0)
     print main_font_size
     text_field.config(font=('Lucida Console', main_font_size, 'normal'))
-    botter_title = tools.fit_title(root.winfo_screenwidth()) # Won't work because title is already printed
+
 
 
 #-------------------------------------------------------------------------------
@@ -356,7 +346,7 @@ textentry.focus_force()
 cursor_style(default_cursor_style)
 
 '''Program Start'''
-start_screen = main_menu(botter_title, entry_message)
+start_screen = main_menu(retrieved, entry_message)
 start_screen._print()
 
 

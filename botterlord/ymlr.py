@@ -7,8 +7,8 @@ import yaml, tools
 def retrieve(filename):
     stream = file(filename, 'r')
     data = yaml.load(stream)
-    return yaml.dump(data, encoding=('utf-8'), default_flow_style=False, allow_unicode=True)
-
+    #return yaml.dump(data, encoding=('utf-8'), default_flow_style=False, allow_unicode=True)
+    return data['title'].encode('utf-8')
 
 def insert(data, filename):
     with open(filename, 'w') as yaml_file:
@@ -24,6 +24,7 @@ def enter_data(cont, valinput, filename): #Cont for container#profile.yml
 def get_data(cont, filename):
     stream = open(filename, 'r')
     profile = yaml.load(stream) # Player information is stored here.
+    data = yaml.dump(profile, default_flow_style = False, encoding=('utf-8'))
     return profile[cont]
 
 def internal_data(filename, io, entry, cont, cont_in = None, cont_in2 = None): #Supports up to 3 containers stacked on top.
