@@ -288,31 +288,40 @@ def try_execute_command(returned):
     print legal_command
 
     if len(input_log) != 0:
-        last_item = len(input_log) - 1
-    else: last_item = 0
+        previous_item = len(input_log) - 2 # -1 because list index starts from 0 and -1 to go to the previous input.
+        print "length of input log:", len(input_log)
+        print "last item:", previous_item
+    else:
+        previous_item = 0
 
-    if legal_command == None and input_log[last_item] != 'start' or \
-    input_log[last_item] != 'load' or input_log[last_item] != 'quit':
-        '''Error message.'''
-        text_field.insert(END, '\n')
-        text_field.insert(END, ' UNKNOWN COMMAND ')
-        print "UNKNOWN COMMAND"
-        tag_yellow(' UNKNOWN COMMAND ')
+    if legal_command == None:
+        print input_log
+        #If there is no such command but still check for previous command relation.
+        #If not related, print tagged error message.
 
-    else: #--------------------------------------------------EXECUTE COMMAND
-
-        if input_log[last_item] == 'start':
+        if input_log[previous_item] == 'start':
+            print "Start command entered with input following: <'%s'>"%(returned[0])
             pass # Start a world with returned[1]
 
-        if input_log[last_item] == 'load':
-            pass # Load a world with returned[1]
+        elif input_log[previous_item] == 'load':
+            print "Load command entered."
+            pass # Start a world with returned[1]
 
-        if input_log[last_item] == 'quit':
+        elif input_log[previous_item] == 'quit':
             # Quit game if returned[1] is yes, or don't do anything if it was no or else.
-            if returned[1] == 'yes':
+            if returned[0] == 'yes':
                 root.quit()
             else:
-                pass # Don't really do anything
+                pass # Don't do anything.
+
+        else: #No previous command relation print error message.
+            '''Error message.'''
+            text_field.insert(END, '\n')
+            text_field.insert(END, ' UNKNOWN COMMAND ')
+            print "UNKNOWN COMMAND"
+            tag_yellow(' UNKNOWN COMMAND ')
+
+    else: #----------------Found legal command, try executing it.
 
         if legal_command == 'create' and parsing[1] == 'bot':
             global real_parsed
