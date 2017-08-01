@@ -1,4 +1,6 @@
-<!doctype html>
+<h1>BOTTERLORD </h1>
+
+[![Build Status](https://travis-ci.org/Marchearth/botterlord.svg?branch=master)](https://travis-ci.org/Marchearth/botterlord)
 <html>
 
 <head>
@@ -8,7 +10,6 @@
 <body>
   <!---------------------------------------------------------------------------------------------------------------------------------------->
   <div class="markdown_page">
-    <p class="markdown_title">BotterLord </p>
     <p class="markdown_text">
       <br> My personal side project that was inspired by *TIS-100, EmpireMud and Overlord Novels by Kugane Maruyama.* <br>
       <br> The plan is to create a DOS inspired retro castle management/strategy game where you personally will be responsible for the Npc's AIs, and hopefully a lot more.<br>
@@ -20,11 +21,12 @@
     <br>
 
     <p class=markdown_list_title> Road Map: </p>
+    
     <ul style="list-style-type:square">
       <li> Clean up zombie codes. </li>
       <li> Set up json/yaml/Sqlite(?choose) sheet for profile saves. </li>
-      
     </ul>
+    
   </div>
   <!---------------------------------------------------------------------------------------------------------------------------------------->
 
