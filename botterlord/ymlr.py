@@ -51,3 +51,18 @@ def internal_data(filename, io, entry, cont, cont_in = None, cont_in2 = None): #
                 prof[cont][cont_in][cont_in2] = entry
         with open(filename, 'w') as yaml_file:
             yaml_file.write(yaml.dump(prof, default_flow_style = False))
+
+def write_to_world(data, profile):
+    pass
+
+def create_world(input_):
+    new_file_loc = "botterlord/worlds/%s"%(input_+'.yml')
+    print "New file will be created at %s"%(new_file_loc)
+    new_file_loc = tools.get_path(new_file_loc)
+
+    with open(new_file_loc, 'w+') as new_profile:
+        yaml.dump({'name': input_}, new_profile, default_flow_style=False)
+        print "File created."
+
+    print "Start command entered with input following: <'%s'>"%(input_)
+    pass # Start a world with returned[1]

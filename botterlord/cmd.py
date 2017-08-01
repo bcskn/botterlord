@@ -3,6 +3,15 @@ pc_commands = ['start', 'load', 'quit', 'create', 'set', 'north', 'east', 'west'
 'show_mouse', 'hide_mouse', "status", 'help', 'log']
 admin_commands = []
 
+def previous_command(input_):
+    if len(input_) != 0:
+        previous_item = len(input_) - 2 # -1 because list index starts from 0 and -1 to go to the previous input.
+        print "length of input log:", len(input_)
+        print "last item:", previous_item
+        return input_[previous_item]
+    else: # List is empty.
+        return None
+
 def find_command(string, allowed_commands=None):
     """Match user command with known commands."""
     if allowed_commands is None:    #  Available commands to the user
