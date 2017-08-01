@@ -21,7 +21,7 @@ side_frame_width = screen_size["width"]/3 #900 # Also the map is bound to this t
 
 window_minimum_height = screen_size["height"]/3
 window_minimum_width = screen_size["width"]/3
-window_background_color = 'gray50'
+window_background_color = 'white' #gray50
 
 map_font = 'Courier New'
 main_font = 'Courier New'
@@ -30,6 +30,8 @@ bot_font = 'Courier New'
 map_font_size = 13
 bot_font_size = 13
 main_font_size = 9
+
+pad_width = 3
 
 #----------------------------------------------DEFAULT INGAME VALUES
 default_hp = 100
@@ -40,10 +42,6 @@ default_loc = '10:44'
 
 '''------Get Images------'''
 _icon_path = tools.get_path("images/botter_logo.ico") # Retrieve image from images folder.
-
-'''-----Connect to the Database-----'''
-#conn = sqlite3.connect(os.path.join('data','botterlord.db'))
-#db = conn.cursor()
 
 '''-----Variables-----'''
 global start
@@ -60,7 +58,7 @@ try:
     retrieved = ymlr.retrieve('title', texts_path)
 except:
     retrieved = ymlr.retrieve('title', texts_path)
-print retrieved
+print "banner: \n", retrieved
 
 #---------------------------------------------
 started = False #In title screen
@@ -102,9 +100,9 @@ main_frame = Frame(root,bg = "Black",relief=FLAT)
 bot_frame = Frame(root,bg = "Black",relief=FLAT, height=bot_frame_height, width=side_frame_width)
 map_frame = Frame(root,bg = "Black",relief=FLAT, height=map_frame_height, width=side_frame_width)
 
-main_frame.grid(row=0,column=0,rowspan=2,sticky=W+E+N+S, padx = (8, 8), pady = (8, 0))
-bot_frame.grid(row=0, column=1, sticky=W+E+N+S, pady=(8,8))
-map_frame.grid(row=1, column=1, sticky=W+E+N+S, cursor=None)
+main_frame.grid(row=0,column=0,rowspan=2,sticky=W+E+N+S, padx = (pad_width, pad_width), pady = (pad_width, 0))
+bot_frame.grid(row=0, column=1, sticky=W+E+N+S, pady=(pad_width,pad_width), padx=(0,pad_width))
+map_frame.grid(row=1, column=1, sticky=W+E+N+S, cursor=None, padx=(0,pad_width))
 main_frame.grid_propagate(False)
 map_frame.grid_propagate(False)
 bot_frame.grid_propagate(False)
@@ -113,21 +111,21 @@ text_field = Text(main_frame,bg = "Black", fg="White",relief=FLAT)
 bot_field = Text(bot_frame,bg = "Black", fg="White",relief=FLAT)
 map_field = Text(map_frame,bg = "Black", fg="White",relief=FLAT)
 textentry = Entry(root, bg = "Black", fg = "White", relief=FLAT)
-scrollbar = Scrollbar(root, bg = "Black", relief=FLAT)
+#scrollbar = Scrollbar(root, bg = "Black", relief=FLAT)
 
 text_field.pack(fill=BOTH, expand=1)
 bot_field.place(rely=0, relx=0,relwidth=1, relheight=1, anchor=NW)
 map_field.place(rely=0, relx=0,relwidth=1, relheight=1, anchor=NW)
 
 
-textentry.grid(row=2,column=0,columnspan=3,sticky=E+W, padx = 8, pady = 8)
-scrollbar.grid(row=0,column=2,rowspan=2, sticky=E+N+S, padx=(8,8), pady=(8,0))
+textentry.grid(row=2,column=0,columnspan=3,sticky=E+W, padx = pad_width, pady = pad_width)
+#scrollbar.grid(row=0,column=2,rowspan=2, sticky=E+N+S, padx=(8,8), pady=(8,0))
 
-text_field.config(insertbackground="White",yscrollcommand=scrollbar.set, wrap=WORD, borderwidth = 10, \
+text_field.config(insertbackground="White", wrap=WORD, borderwidth = 10, \
 font=(main_font, main_font_size, 'normal'))
 bot_field.config(insertbackground="White", borderwidth = 8, font=(bot_font, bot_font_size, 'normal'))
 map_field.config(insertbackground="White", borderwidth = 8, font=(map_font, map_font_size, 'normal'))
-scrollbar.config(command=text_field.yview)
+#scrollbar.config(command=text_field.yview)
 textentry.config(insertbackground="White")
 
 root.grid_rowconfigure(0, weight=1)
@@ -142,7 +140,7 @@ def cursor_style(style):
     text_field.config(cursor=style)
     bot_field.config(cursor=style)
     map_field.config(cursor=style)
-    scrollbar.config(cursor=style)
+    #scrollbar.config(cursor=style)
     textentry.config(cursor=style)
     root.config(cursor=style)
 
@@ -194,7 +192,7 @@ class main_menu:
         text_field.insert(END, self.menu_text)
 
     def start_message(self):
-        text_field.insert(END, "\nSTART MESSAGE PLACEHOLDER") #How to wait for a value the right way ?
+        text_field.insert(END, ymlr.retrieve('start_message', texts_path))
 
     def load_message(self):
         text_field.insert(END, "\nLOAD MESSAGE PLACEHOLDER")
@@ -274,7 +272,7 @@ def setup_world(_input): # OBSOLETE --- REFACTOR
             waiting_value = False
             _start_1()
 
-def get_input_log(event):
+def get_input_log():
     """Re-enter last returned command into textentry."""
     global input_log
     textentry.insert(END, input_log)
@@ -300,6 +298,14 @@ def try_execute_command(returned):
         #If not related, print tagged error message.
 
         if input_log[previous_item] == 'start':
+            new_file_loc = "botterlord/worlds/%s"%(returned[0]+'.yml')
+            print "New file will be created at %s"%(new_file_loc)
+            new_file_loc = tools.get_path(new_file_loc)
+
+            with open(new_file_loc, 'w+') as new_profile:
+                yaml.dump({'name': returned[0]}, new_profile, default_flow_style=False)
+                print "File created."
+
             print "Start command entered with input following: <'%s'>"%(returned[0])
             pass # Start a world with returned[1]
 
@@ -336,6 +342,7 @@ def try_execute_command(returned):
         if legal_command == 'hide_mouse': cursor_style("none")
         if legal_command == 'status': pass # Show current status
         if legal_command == 'help': help_show()
+        if legal_command == 'log': get_input_log()
 
 def prnt_mainfeed(p_row, p_col): #------------OBSOLETE
     """Inserts the node-state text to the main feed."""
@@ -363,11 +370,20 @@ def help_show():
     cmds = "\n%s"%(cmd.pc_commands)
     text_field.insert(END, cmds)
 
+def get_last(event):
+    global input_log
+    try:
+        last_ = len(input_log) - 1
+    except:
+        pass # No input recorded in the log yet.
+    stringer = '\n' + str(input_log[last_])
+    textentry.insert(END, stringer)
+
 
 #-------------------------------------------------------------------------------
 #---------------------------Bind-Events-----------------------------------------
 textentry.bind('<Return>', enterpressed)
-textentry.bind('<Up>', get_input_log)
+textentry.bind('<Up>', get_last)
 root.bind("<Button-1>", auto_setfocus)
 root.bind("<F11>", toggle_fullscreen)
 root.after(1000, save_state) # Initiate save loop

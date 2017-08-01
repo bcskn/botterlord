@@ -1,2 +1,3 @@
 *.pyc
 worlds/*.pyc
+botterlord/worlds/*.yml
