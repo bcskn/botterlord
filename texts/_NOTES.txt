@@ -1,3 +1,61 @@
+Gameplay:
+  start
+  profile name
+  # Intro story
+  Tutorial:
+    Decisions:
+      >Create scout bot:
+        >Program it to wander undiscovered locations.
+      >Deploy bot at (location).
+      ...
+      An enemy quarters have been located by your scout bot. Waiting for your orders.
+      >Details:
+        Location: 00:00
+        Comment: Doesn't seem to be heavily fortified.
+        Wood fence borders, large tents, arms and armor racks. --> Seems like a military camp.
+      >Infiltrate camp:
+        Scouter has tried to walk into the camp directly {No stealth data, no complex movement data}
+        He was blocked by guards.
+        Guards are suspicious of scouter, it's appearance is not perfect. Prolonged loitering may end with scout being attacked.
+        {Visual data insufficient for perfect encounter. No natural language and logic data to converse with the enemy.}
+      >Command scouter:
+        You took manual control of bot: Scouter. Exit manual control with, <close connection> command.
+        >say "Hello"
+          {There is an interaction meter. Waiting too long, not saying the right words will lower it. At 0 they will attack.}
+          -What is it you want peasant ? This is a military camp, if you have no important business buzz off. {Greet based on bot stats.}
+
+
+map_field : A visual representation of the castle state.
+bot_field : Bot activity
+
+
+
+New option to delete stored profile and also delete the database.
+Reload the node and npc data with fresh player file.
+
+Change friendly code.
+
+Kinds of information the nodes will store:
+Enemies inside,
+Environment description,
+Exits,
+Items,
+
+> Dynamic World
+
+> Chatbot npcs :
+Concept chatbot techniques :
+  Things that npcs will talk about.
+  Example:
+    >Who are you (Npc information)
+    >Where are you (Npc Location)
+    >What happened (Events) --> This will be important for questing and
+    gathering information through bots.
+    >Who am I (Things npc knows about the player or bot)
+
+
+
+
 ///// DRY + ORTHOGONAL SYSTEMS + Prefer human readable formats
 If there is a bot placed here insert np bot avatar.
 else:
@@ -187,91 +245,3 @@ They need a regular supply of radiation. Zolshreim uses his ship's reserves
 of uranium and plutonium to survive. He must dig more on the earth and use
 everything the sun outputs.
 -------------------------------------------------------------------------------
-
-
-New option to delete stored profile and also delete the database.
-Reload the node and npc data with fresh player file.
-
-Change friendly code.
-
-Kinds of information the nodes will store:
-Enemies inside,
-Environment description,
-Exits,
-Items,
-
->Add a bug counter-measure:
-Take the mod of player column by 4 if it's not 0 relocate player to a nearby node.
-
-
-> Chatbot npcs :
-Concept chatbot techniques :
-  Things that npcs will talk about.
-  Example:
-    >Who are you (Npc information)
-    >Where are you (Npc Location)
-    >What happened (Events) --> This will be important for questing and
-    gathering information through bots.
-    >Who am I (Things npc knows about the player or bot)
-
-    >And other information that bots learn from old english text files.
-
-    '''
-    17 Nodes per line
-    20*17 = 340 Nodes overall
-    0                                                                  68
-    00000000000000000000000000000000000000000000000000000000000000000000  <0
-    00000000000000000000000000000000000000000000000000000000000000000000
-    00000000000000000000000000000000000000000000000000000000000000000000
-    00000000000000000000000000000000000000000000000000000000000000000000
-    00000000000000000000000000000000000000000000000000000000000000000000
-    00000000000000000000000000000000000000000000000000000000000000000000
-    00000000000000000000000000000000000000000000000000000000000000000000
-    00000000000000000000000000000000000000000000000000000000000000000000
-    00000000000000000000000000000000000000000000000000000000000000000000
-    00000000000000000000000000000000000000000000000000000000000000000000
-    00000000000000000000000000000000<00>00000000000000000000000000000000 <10
-    00000000000000000000000000000000000000000000000000000000000000000000
-    00000000000000000000000000000000000000000000000000000000000000000000
-    00000000000000000000000000000000000000000000000000000000000000000000
-    00000000000000000000000000000000000000000000000000000000000000000000
-    00000000000000000000000000000000000000000000000000000000000000000000
-    00000000000000000000000000000000000000000000000000000000000000000000
-    00000000000000000000000000000000000000000000000000000000000000000000
-    00000000000000000000000000000000000000000000000000000000000000000000
-    00000000000000000000000000000000000000000000000000000000000000000000
-    00000000000000000000000000000000000000000000000000000000000000000000 <20
-    '''
-    """"
-
-    Origin: 1:1
-    get [XX] location data
-    Location of the player: 10:50
-
-    """
-    """
-
-
-    Px: Player Location X
-    Py: Player Location Y
-    msp: Map start point
-
-    msp = Px-10,Py-10
-    mep = Px+10,Py+10
-
-    Example:
-    If Player is in (18,56)
-    First node will be in 8, 46
-    And the last printed node in 28, 66
-
-    If the player is close to the border:
-    Code:
-    If Px-10 < 0:
-        Node = '     '
-
-
-    [   ] can be ..... or ^^^^^ or anything in the map text.
-    <OO> is the player/bot
-    *Divide the map lines into 5 character packs(nodes), recognize the characters (example: if the node is ^^^^^ it will name it forest),
-    place the player in the middle of the screen, print player's surroundings, repeat* <-- This is how the map will work.
-    """
