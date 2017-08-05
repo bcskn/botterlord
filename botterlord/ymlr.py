@@ -59,9 +59,12 @@ def create_world(input_):
     new_file_loc = "botterlord/worlds/%s"%(input_+'.yml')
     print "New file will be created at %s"%(new_file_loc)
     new_file_loc = tools.get_path(new_file_loc)
-
+    dump_data = { \
+    'name': input_, \
+    'level': None \
+    }
     with open(new_file_loc, 'w+') as new_profile:
-        yaml.dump({'name': input_}, new_profile, default_flow_style=False)
+        yaml.dump((dump_data), new_profile, default_flow_style=False)
         print "File created."
 
     print "Start command entered with input following: <'%s'>"%(input_)

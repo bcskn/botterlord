@@ -188,6 +188,10 @@ class main_menu:
         pass # Doesn't really have anything left to do, all the quitting will be done
         # in the try_execute_command section when the last input is quit.
 
+def start_phase(profilename):
+    ymlr.create_world(profilename) # Randomized maybe ?
+    #LOAD THE DATA FROM THE YAML FILE
+
 
 def _load_(): #UNDER CONSTRUCTION
     """Choose already existing yml file to set as profile_name."""
@@ -240,7 +244,8 @@ def try_execute_command(returned):
         #If not related, print tagged error message.
 
         if previous_item == 'start':
-            ymlr.create_world(returned[0])
+            start_phase(returned[0])
+
 
         elif previous_item == 'load':
             print "Load command entered."
@@ -319,7 +324,6 @@ test_text = ymlr.retrieve('test_text', texts_path)
 bot_field.insert(END, test_text)
 map_field.insert(END, test_text)
 text_field.insert(END, test_text)
-print ">>>>>>", try_execute_command(['start']) ############################################
 
 
 #-------------------------------------------------------------------------------

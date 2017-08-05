@@ -1,0 +1,1370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:/marchearth</id>
+  <link type="text/html" rel="alternate" href="https://github.com/marchearth"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/marchearth.atom"/>
+  <title>Marchearth’s Activity</title>
+  <updated>2017-08-01T23:22:37Z</updated>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6374578909</id>
+    <published>2017-08-01T23:22:37Z</published>
+    <updated>2017-08-01T23:22:37Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/botterlord/compare/58bc3468f1...ec1703ee63"/>
+    <title type="html">Marchearth pushed to master at Marchearth/botterlord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-08-01T23:22:37Z&quot;&gt;Aug 1, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/botterlord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/botterlord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/botterlord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/botterlord/commit/ec1703ee6372bb67b807003374f64a0a3596a11b&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;ec1703e&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Update README.md
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6374005324</id>
+    <published>2017-08-01T21:42:40Z</published>
+    <updated>2017-08-01T21:42:40Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/botterlord/compare/d49eb750ca...58bc3468f1"/>
+    <title type="html">Marchearth pushed to master at Marchearth/botterlord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-08-01T21:42:40Z&quot;&gt;Aug 1, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/botterlord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/botterlord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/botterlord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/botterlord/commit/58bc3468f1dc0d652fa0c84b8bebf829f2792283&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;58bc346&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Written first tests for side functions.
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6373455186</id>
+    <published>2017-08-01T20:29:01Z</published>
+    <updated>2017-08-01T20:29:01Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/botterlord/compare/386bad2e7b...d49eb750ca"/>
+    <title type="html">Marchearth pushed to master at Marchearth/botterlord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-08-01T20:29:01Z&quot;&gt;Aug 1, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/botterlord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/botterlord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/botterlord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/botterlord/commit/d49eb750caf9bc3fa9e1674c5aa014649a56b5a4&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;d49eb75&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Wrote new profile creation and edit existing profile functions.
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6372212953</id>
+    <published>2017-08-01T17:43:06Z</published>
+    <updated>2017-08-01T17:43:06Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/botterlord/compare/c06147356e...386bad2e7b"/>
+    <title type="html">Marchearth pushed to master at Marchearth/botterlord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-08-01T17:43:06Z&quot;&gt;Aug 1, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/botterlord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/botterlord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/botterlord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/botterlord/commit/386bad2e7b0d39b6ef154f6d4661a70321fac709&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;386bad2&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Fixed &quot;unknown command&quot; bug.
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:WatchEvent/6371461545</id>
+    <published>2017-08-01T16:04:54Z</published>
+    <updated>2017-08-01T16:04:54Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/mrmrs/colors"/>
+    <title type="html">Marchearth starred mrmrs/colors</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- watch --&gt;
+&lt;div class=&quot;simple&quot;&gt;
+  &lt;svg aria-label=&quot;Watch&quot; class=&quot;octicon octicon-star dashboard-event-icon&quot; height=&quot;16&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;14&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+  &lt;div class=&quot;title&quot;&gt;
+    &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:WatchEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; starred &lt;a href=&quot;/mrmrs/colors&quot; data-ga-click=&quot;News feed, event click, Event click type:WatchEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;mrmrs/colors&lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;time&quot;&gt;
+    &lt;relative-time datetime=&quot;2017-08-01T16:04:54Z&quot;&gt;Aug 1, 2017&lt;/relative-time&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6355885406</id>
+    <published>2017-07-29T23:52:57Z</published>
+    <updated>2017-07-29T23:52:57Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/botterlord/compare/20ee56c690...c06147356e"/>
+    <title type="html">Marchearth pushed to master at Marchearth/botterlord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-29T23:52:57Z&quot;&gt;Jul 29, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/botterlord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/botterlord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/botterlord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/botterlord/commit/c06147356eb1704f719d6ff58b91089c123ef364&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;c061473&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Implemented a better value waiting system (doesn&#39;t actually wait just
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6355733090</id>
+    <published>2017-07-29T22:08:21Z</published>
+    <updated>2017-07-29T22:08:21Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/botterlord/compare/2e18e6d197...20ee56c690"/>
+    <title type="html">Marchearth pushed to master at Marchearth/botterlord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-29T22:08:21Z&quot;&gt;Jul 29, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/botterlord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/botterlord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/botterlord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/botterlord/commit/20ee56c690cbc67db9dcdf258da05b05672b0d11&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;20ee56c&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Fixed title and yaml print problems.
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6355410540</id>
+    <published>2017-07-29T19:03:15Z</published>
+    <updated>2017-07-29T19:03:15Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/botterlord/compare/c890c08b9a...2e18e6d197"/>
+    <title type="html">Marchearth pushed to master at Marchearth/botterlord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-29T19:03:15Z&quot;&gt;Jul 29, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/botterlord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/botterlord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/botterlord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/botterlord/commit/2e18e6d197108560f0d6bc2e1be448bb57f2f724&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;2e18e6d&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Fixed file not found error when oppening the file manually.
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6337235819</id>
+    <published>2017-07-26T23:15:35Z</published>
+    <updated>2017-07-26T23:15:35Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/botterlord/compare/39dfdcabb6...c890c08b9a"/>
+    <title type="html">Marchearth pushed to master at Marchearth/botterlord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-26T23:15:35Z&quot;&gt;Jul 26, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/botterlord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/botterlord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/botterlord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/botterlord/commit/c890c08b9aea227a06a2b45f4de582325bbb762a&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;c890c08&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Merge branch &#39;master&#39; of &lt;a href=&quot;https://github.com/Marchearth/BotterLord&quot; rel=&quot;noreferrer&quot;&gt;https://github.com/Marchearth/BotterLord&lt;/a&gt;
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/botterlord/commit/513eed0b6286f02bfeebff9d4296ca54fc998bc7&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;513eed0&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Updated latest changes to working state.
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;more&quot;&gt;&lt;a href=&quot;/Marchearth/botterlord/compare/39dfdcabb6...c890c08b9a&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:comparison&quot; rel=&quot;noreferrer&quot;&gt;View comparison for these 2 commits »&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6337208263</id>
+    <published>2017-07-26T23:10:04Z</published>
+    <updated>2017-07-26T23:10:04Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/botterlord/compare/90aaaec7ca...39dfdcabb6"/>
+    <title type="html">Marchearth pushed to master at Marchearth/botterlord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-26T23:10:04Z&quot;&gt;Jul 26, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/botterlord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/botterlord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/botterlord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/botterlord/commit/39dfdcabb6adea271fe767e977cfa1650959d9bc&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;39dfdca&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Update README.md
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6337202686</id>
+    <published>2017-07-26T23:08:59Z</published>
+    <updated>2017-07-26T23:08:59Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/botterlord/compare/0a447b9ad9...90aaaec7ca"/>
+    <title type="html">Marchearth pushed to master at Marchearth/botterlord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-26T23:08:59Z&quot;&gt;Jul 26, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/botterlord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/botterlord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/botterlord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/botterlord/commit/90aaaec7ca68842e1c8e50d87b2861bc4d9fdd19&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;90aaaec&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Added pathlib to dependencies.
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6319985955</id>
+    <published>2017-07-24T23:47:03Z</published>
+    <updated>2017-07-24T23:47:03Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/botterlord/compare/18baa304c1...0a447b9ad9"/>
+    <title type="html">Marchearth pushed to master at Marchearth/botterlord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-24T23:47:03Z&quot;&gt;Jul 24, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/botterlord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/botterlord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/botterlord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/botterlord/commit/0a447b9ad9b83b72b13a4ffcd0d275392a962c43&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;0a447b9&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Writing the start screen after the menu.
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6318462220</id>
+    <published>2017-07-24T19:45:44Z</published>
+    <updated>2017-07-24T19:45:44Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/botterlord/compare/6c5ab2d5a4...18baa304c1"/>
+    <title type="html">Marchearth pushed to master at Marchearth/botterlord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-24T19:45:44Z&quot;&gt;Jul 24, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/botterlord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/botterlord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/botterlord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits &quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;&quot; data-canonical-src=&quot;https://1.gravatar.com/avatar/32da128737416c2be2987a8a84e2317f?d=https%3A%2F%2Fassets-cdn.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png&amp;amp;r=x&amp;amp;s=140&quot; height=&quot;16&quot; src=&quot;https://camo.githubusercontent.com/af0c4c2cb7f4e0f9e2beb55927b275c9574d49d2/68747470733a2f2f312e67726176617461722e636f6d2f6176617461722f33326461313238373337343136633262653239383761386138346532333137663f643d68747470732533412532462532466173736574732d63646e2e6769746875622e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d7826733d313430&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/botterlord/commit/18baa304c1fe69d8dc797fce8e9089492728831d&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;18baa30&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Updated build distro. Now setup.py works but I&#39;m not sure about the t…
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6311959493</id>
+    <published>2017-07-24T00:16:17Z</published>
+    <updated>2017-07-24T00:16:17Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/botterlord/compare/a4848fdff1...6c5ab2d5a4"/>
+    <title type="html">Marchearth pushed to master at Marchearth/botterlord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-24T00:16:17Z&quot;&gt;Jul 24, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/botterlord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/botterlord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/botterlord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/botterlord/commit/6c5ab2d5a409ff4c5cc383b2f22bdd1099a25f38&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;6c5ab2d&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Learning to build test.
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6311958066</id>
+    <published>2017-07-24T00:15:31Z</published>
+    <updated>2017-07-24T00:15:31Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/botterlord/compare/a734aaa0fe...a4848fdff1"/>
+    <title type="html">Marchearth pushed to master at Marchearth/botterlord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-24T00:15:31Z&quot;&gt;Jul 24, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/botterlord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/botterlord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/botterlord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/botterlord/commit/a4848fdff1908b1b7335e19fa6e6fcaa6048f2ae&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;a4848fd&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Merge branch &#39;master&#39; of &lt;a href=&quot;https://github.com/Marchearth/BotterLord&quot; rel=&quot;noreferrer&quot;&gt;https://github.com/Marchearth/BotterLord&lt;/a&gt;
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/botterlord/commit/63f229b68b060936e96cd3ae2c64071b744ab58e&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;63f229b&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Learning to package.
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;more&quot;&gt;&lt;a href=&quot;/Marchearth/botterlord/compare/a734aaa0fe...a4848fdff1&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:comparison&quot; rel=&quot;noreferrer&quot;&gt;View comparison for these 2 commits »&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6311947728</id>
+    <published>2017-07-24T00:10:02Z</published>
+    <updated>2017-07-24T00:10:02Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/botterlord/compare/e58eca02dd...a734aaa0fe"/>
+    <title type="html">Marchearth pushed to master at Marchearth/botterlord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-24T00:10:02Z&quot;&gt;Jul 24, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/botterlord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/botterlord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/botterlord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/botterlord/commit/a734aaa0febbdb3e5baf65f487dfc7936d7f9c9d&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;a734aaa&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Learning to package.
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6311934006</id>
+    <published>2017-07-24T00:02:28Z</published>
+    <updated>2017-07-24T00:02:28Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/botterlord/compare/c7dc6f377b...e58eca02dd"/>
+    <title type="html">Marchearth pushed to master at Marchearth/botterlord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-24T00:02:28Z&quot;&gt;Jul 24, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/botterlord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/botterlord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/botterlord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/botterlord/commit/e58eca02dd052332da317e0466a3543a53335de9&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;e58eca0&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Merge branch &#39;master&#39; of &lt;a href=&quot;https://github.com/Marchearth/BotterLord&quot; rel=&quot;noreferrer&quot;&gt;https://github.com/Marchearth/BotterLord&lt;/a&gt;
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/botterlord/commit/c0ca9e42391a2c8d6badeb37033dd54fcdf221af&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;c0ca9e4&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Merge branch &#39;master&#39; of &lt;a href=&quot;https://github.com/Marchearth/BotterLord&quot; rel=&quot;noreferrer&quot;&gt;https://github.com/Marchearth/BotterLord&lt;/a&gt;
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;more&quot;&gt;&lt;a href=&quot;/Marchearth/botterlord/compare/c7dc6f377b...e58eca02dd&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:comparison&quot; rel=&quot;noreferrer&quot;&gt;View comparison for these 2 commits »&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6311926392</id>
+    <published>2017-07-23T23:58:41Z</published>
+    <updated>2017-07-23T23:58:41Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/botterlord/compare/1a9f6296c3...c7dc6f377b"/>
+    <title type="html">Marchearth pushed to master at Marchearth/botterlord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-23T23:58:41Z&quot;&gt;Jul 23, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/botterlord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/botterlord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/botterlord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/botterlord/commit/c7dc6f377b319c701fb0c7cf385cf85726b6eb98&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;c7dc6f3&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Merge branch &#39;master&#39; of &lt;a href=&quot;https://github.com/Marchearth/BotterLord&quot; rel=&quot;noreferrer&quot;&gt;https://github.com/Marchearth/BotterLord&lt;/a&gt;
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/botterlord/commit/2471b9b92b770769515ad156eef3c112426a9efa&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;2471b9b&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Written setup.py.
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;more&quot;&gt;&lt;a href=&quot;/Marchearth/botterlord/compare/1a9f6296c3...c7dc6f377b&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:comparison&quot; rel=&quot;noreferrer&quot;&gt;View comparison for these 2 commits »&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6311875451</id>
+    <published>2017-07-23T23:29:59Z</published>
+    <updated>2017-07-23T23:29:59Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/botterlord/compare/df9e7ec669...1a9f6296c3"/>
+    <title type="html">Marchearth pushed to master at Marchearth/botterlord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-23T23:29:59Z&quot;&gt;Jul 23, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/botterlord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/botterlord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/botterlord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/botterlord/commit/1a9f6296c319b01b5ddae95f955c46437528818e&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;1a9f629&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Written setup.py.
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6311846749</id>
+    <published>2017-07-23T23:13:31Z</published>
+    <updated>2017-07-23T23:13:31Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/BotterLord/compare/3d47de6000...df9e7ec669"/>
+    <title type="html">Marchearth pushed to master at Marchearth/BotterLord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-23T23:13:31Z&quot;&gt;Jul 23, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/BotterLord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/BotterLord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/BotterLord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/BotterLord/commit/df9e7ec669bf3be95abfc6ebc3b064450ce4ebb9&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;df9e7ec&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Checking .travis.yml.
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6311842378</id>
+    <published>2017-07-23T23:11:08Z</published>
+    <updated>2017-07-23T23:11:08Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/BotterLord/compare/32fafd1d26...3d47de6000"/>
+    <title type="html">Marchearth pushed to master at Marchearth/BotterLord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-23T23:11:08Z&quot;&gt;Jul 23, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/BotterLord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/BotterLord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/BotterLord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/BotterLord/commit/3d47de600084b899f3f4fc1b4b28f32ff7b3a3d9&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;3d47de6&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Updated requirements.txt.
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6311839463</id>
+    <published>2017-07-23T23:09:25Z</published>
+    <updated>2017-07-23T23:09:25Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/BotterLord/compare/8f20489ffc...32fafd1d26"/>
+    <title type="html">Marchearth pushed to master at Marchearth/BotterLord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-23T23:09:25Z&quot;&gt;Jul 23, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/BotterLord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/BotterLord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/BotterLord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/BotterLord/commit/32fafd1d26122d51024f78f676b164bfe659ecda&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;32fafd1&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Updated requirements.txt.
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6311827688</id>
+    <published>2017-07-23T23:02:52Z</published>
+    <updated>2017-07-23T23:02:52Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/BotterLord/compare/2665b3d593...8f20489ffc"/>
+    <title type="html">Marchearth pushed to master at Marchearth/BotterLord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-23T23:02:52Z&quot;&gt;Jul 23, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/BotterLord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/BotterLord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/BotterLord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/BotterLord/commit/8f20489ffc10329912e0b77312ebf403a3dbdca3&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;8f20489&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Drastically changed file structure to a more common practice.
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6311737890</id>
+    <published>2017-07-23T22:11:02Z</published>
+    <updated>2017-07-23T22:11:02Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/marchearth.github.io/compare/18ae112f7f...1ec9c07311"/>
+    <title type="html">Marchearth pushed to master at Marchearth/marchearth.github.io</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-23T22:11:02Z&quot;&gt;Jul 23, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/marchearth.github.io/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/marchearth.github.io&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/marchearth.github.io&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/marchearth.github.io/commit/1ec9c0731125062fc493e1ef286ff0b1c279a1c6&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;1ec9c07&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Delete _config.yml
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6311732435</id>
+    <published>2017-07-23T22:08:05Z</published>
+    <updated>2017-07-23T22:08:05Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/marchearth.github.io/compare/05b5fa5a83...18ae112f7f"/>
+    <title type="html">Marchearth pushed to master at Marchearth/marchearth.github.io</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-23T22:08:05Z&quot;&gt;Jul 23, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/marchearth.github.io/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/marchearth.github.io&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/marchearth.github.io&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits &quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Siteleaf&quot;&gt;
+            &lt;img alt=&quot;&quot; data-canonical-src=&quot;https://0.gravatar.com/avatar/cd70f54b3e85feeaa53f859a4dd7d15c?d=https%3A%2F%2Fassets-cdn.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png&amp;amp;r=x&amp;amp;s=140&quot; height=&quot;16&quot; src=&quot;https://camo.githubusercontent.com/cbdf949b9910a952ac1b802b1fdf0382f9bcbb50/68747470733a2f2f302e67726176617461722e636f6d2f6176617461722f63643730663534623365383566656561613533663835396134646437643135633f643d68747470732533412532462532466173736574732d63646e2e6769746875622e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d7826733d313430&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/marchearth.github.io/commit/18ae112f7fed30bce4387218eceee59f14fa9e05&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;18ae112&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Added Config
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6311732308</id>
+    <published>2017-07-23T22:08:02Z</published>
+    <updated>2017-07-23T22:08:02Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/marchearth.github.io/compare/f7cec14507...05b5fa5a83"/>
+    <title type="html">Marchearth pushed to master at Marchearth/marchearth.github.io</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-23T22:08:02Z&quot;&gt;Jul 23, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/marchearth.github.io/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/marchearth.github.io&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/marchearth.github.io&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/marchearth.github.io/commit/05b5fa5a834589c94481ba958886dcba82460a33&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;05b5fa5&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Cleaned repo.
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6311721169</id>
+    <published>2017-07-23T22:01:56Z</published>
+    <updated>2017-07-23T22:01:56Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/marchearth.github.io/compare/ebe5491389...f7cec14507"/>
+    <title type="html">Marchearth pushed to master at Marchearth/marchearth.github.io</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-23T22:01:56Z&quot;&gt;Jul 23, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/marchearth.github.io/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/marchearth.github.io&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/marchearth.github.io&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/marchearth.github.io/commit/f7cec14507bd075169718ba7edbc63baeb828a95&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;f7cec14&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Modified markdown.css
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/marchearth.github.io/commit/bcb6181a300c06deeb90911a240b5711576aea23&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;bcb6181&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Design Update.
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;more&quot;&gt;&lt;a href=&quot;/Marchearth/marchearth.github.io/compare/ebe5491389...f7cec14507&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:comparison&quot; rel=&quot;noreferrer&quot;&gt;View comparison for these 2 commits »&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6310679624</id>
+    <published>2017-07-23T12:51:54Z</published>
+    <updated>2017-07-23T12:51:54Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/BotterLord/compare/9e64bb7182...2665b3d593"/>
+    <title type="html">Marchearth pushed to master at Marchearth/BotterLord</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-23T12:51:54Z&quot;&gt;Jul 23, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/BotterLord/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/BotterLord&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/BotterLord&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/BotterLord/commit/2665b3d593a3f6177feab44ffd144c8b9ce35858&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;2665b3d&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Fixed command going to start class bug.
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6309422020</id>
+    <published>2017-07-22T21:51:41Z</published>
+    <updated>2017-07-22T21:51:41Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/marchearth.github.io/compare/6238853501...ebe5491389"/>
+    <title type="html">Marchearth pushed to master at Marchearth/marchearth.github.io</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-22T21:51:41Z&quot;&gt;Jul 22, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/marchearth.github.io/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/marchearth.github.io&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/marchearth.github.io&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/marchearth.github.io/commit/ebe54913899fad35bbb7476ae2027e6e8e4808eb&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;ebe5491&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Added separator for markdown docs.
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:PushEvent/6309376768</id>
+    <published>2017-07-22T21:22:42Z</published>
+    <updated>2017-07-22T21:22:42Z</updated>
+    <link type="text/html" rel="alternate" href="https://github.com/Marchearth/marchearth.github.io/compare/e7cd156a32...6238853501"/>
+    <title type="html">Marchearth pushed to master at Marchearth/marchearth.github.io</title>
+    <author>
+      <name>Marchearth</name>
+      <email>mentalnerd1@gmail.com</email>
+      <uri>https://github.com/Marchearth</uri>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars3.githubusercontent.com/u/12624047?v=4&amp;s=30"/>
+    <content type="html">&lt;!-- push --&gt;
+&lt;svg aria-label=&quot;Push&quot; class=&quot;octicon octicon-git-commit dashboard-event-icon&quot; height=&quot;32&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 14 16&quot; width=&quot;28&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+
+&lt;div class=&quot;time&quot;&gt;
+  &lt;relative-time datetime=&quot;2017-07-22T21:22:42Z&quot;&gt;Jul 22, 2017&lt;/relative-time&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;title&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:actor&quot; rel=&quot;noreferrer&quot;&gt;Marchearth&lt;/a&gt; pushed to &lt;a href=&quot;/Marchearth/marchearth.github.io/tree/master&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:branch&quot; rel=&quot;noreferrer&quot;&gt;master&lt;/a&gt; at &lt;a href=&quot;/Marchearth/marchearth.github.io&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:repo&quot; rel=&quot;noreferrer&quot;&gt;Marchearth/marchearth.github.io&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;details&quot;&gt;
+  &lt;a href=&quot;/Marchearth&quot; rel=&quot;noreferrer&quot;&gt;&lt;img alt=&quot;@Marchearth&quot; class=&quot;gravatar&quot; height=&quot;30&quot; src=&quot;https://avatars2.githubusercontent.com/u/12624047?v=4&amp;amp;s=60&quot; width=&quot;30&quot;&gt;&lt;/a&gt;
+
+    &lt;div class=&quot;commits pusher-is-only-committer&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span title=&quot;Marchearth&quot;&gt;
+            &lt;img alt=&quot;@Marchearth&quot; height=&quot;16&quot; src=&quot;https://avatars3.githubusercontent.com/u/12624047?v=4&amp;amp;s=32&quot; width=&quot;16&quot;&gt;
+          &lt;/span&gt;
+          &lt;code&gt;&lt;a href=&quot;/Marchearth/marchearth.github.io/commit/6238853501023951b7ea7045422a83193e46b5a0&quot; data-ga-click=&quot;News feed, event click, Event click type:PushEvent target:sha&quot; rel=&quot;noreferrer&quot;&gt;6238853&lt;/a&gt;&lt;/code&gt;
+          &lt;div class=&quot;message&quot;&gt;
+            &lt;blockquote&gt;
+              Auto content update. (Srs.Bot-Website/update.py)
+            &lt;/blockquote&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+</feed>
