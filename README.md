@@ -23,16 +23,6 @@
     </p>
     <img class=screenshot src="https://raw.githubusercontent.com/Marchearth/BotterLord/master/botterlord/images/_botScreen.png">
     <br>
-
-    <p class=markdown_list_title> Road Map: </p>
-    
-    <ul style="list-style-type:square">
-      <li> Clean up zombie codes. </li>
-      <li> Set up json/yaml/Sqlite(?choose) sheet for profile saves. </li>
-<<<<<<< HEAD
-
-=======
->>>>>>> ec1703ee6372bb67b807003374f64a0a3596a11b
     </ul>
     
   </div>
