@@ -11,7 +11,7 @@ setup(name='botterlord',
       long_description=readme(),
       url='http://github.com/Marchearth/',
       author='Buğra Coşkun',
-      author_email='mentalnerd1@gmail.com',
+      author_email='bgra.coskn@gmail.com',
       license='Apache 2.0',
       packages=['botterlord'],
       install_requires=[
@@ -20,5 +20,4 @@ setup(name='botterlord',
           'pathlib'
       ],
       zip_safe=False,
-      test_suite='pytest',
-      tests
+      test_suite='pytest', test)

@@ -40,6 +40,11 @@ default_mp = 100
 default_loc = '10:44'
 #----------------------------------------------
 
+''' ----- Working Directory ----- '''
+main_path = os.path.join( os.getcwd() , 'botterlord' ) #Get the directory __main__.py is in
+print main_path
+
+print 'Working directory path:', main_path
 
 '''------Get Images------'''
 _icon_path = tools.get_path("images/botter_logo.ico") # Retrieve image from images folder.
@@ -54,13 +59,11 @@ bot_locs = []
 #tools.get_path path for texts.yml works on runscript package for atom
 #but it doesn't work with cmd python command on windows 10, didn't test on
 #different operating systems.
-texts_path = tools.get_path("texts/texts.yml")
-try:
-    retrieved = ymlr.retrieve('title', texts_path)
-except:
-    retrieved = ymlr.retrieve('title', texts_path)
-print "banner: \n", retrieved
 
+texts_path = os.path.join(main_path, 'texts/texts.yml')
+print 'texts.yml path:', texts_path
+retrieved = ymlr.retrieve('title', texts_path)
+print "banner: \n", retrieved
 #---------------------------------------------
 started = False #In title screen
 waiting_value = False

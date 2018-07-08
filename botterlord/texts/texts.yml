@@ -1,0 +1,29 @@
+title: |
+    ╔══════════════════════════════════════════════════════════════════════════════════════╗
+    ║ ██████╗  ██████╗ ████████╗████████╗███████╗██████╗ ██╗      ██████╗ ██████╗ ██████╗  ║
+    ║ ██╔══██╗██╔═══██╗╚══██╔══╝╚══██╔══╝██╔════╝██╔══██╗██║     ██╔═══██╗██╔══██╗██╔══██╗ ║
+    ║ ██████╔╝██║   ██║   ██║      ██║   █████╗  ██████╔╝██║     ██║   ██║██████╔╝██║  ██║ ║
+    ║ ██╔══██╗██║   ██║   ██║      ██║   ██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██╗██║  ██║ ║
+    ║ ██████╔╝╚██████╔╝   ██║      ██║   ███████╗██║  ██║███████╗╚██████╔╝██║  ██║██████╔╝ ║
+    ║ ╚═════╝  ╚═════╝    ╚═╝      ╚═╝   ╚══════╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝  ║
+    ╚══════════════════════════════════════════════════════════════════════════════════════╝
+
+test_text: |
+  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+  BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+  CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+  DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+  EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+  FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+  GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+  HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+  JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
+  KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
+  LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+
+
+start_message: " \n\n
+  Creating new world. \n
+  What will it's name be ? \n "
+load_message: |
+  Which world do you want to continue your conquest ?

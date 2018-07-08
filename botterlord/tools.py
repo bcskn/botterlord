@@ -17,7 +17,7 @@ def get_monitor_size():
     screen_size = screen_size.split("x")
     screen_size = {"width": int(screen_size[0]), "height": int(screen_size[1])}
     return screen_size
-
+"""
 def get_path(filename = None):
     if platform.system() == "Windows":
         separator = "\\"
@@ -35,8 +35,11 @@ def get_path(filename = None):
                 _path = PurePath(_path, i)
     _path = str(_path)
     return _path
+"""
 
-print get_path("texts/texts.yml")
+def get_path(_path):
+    return None
+
 
 def parse_str_loc(strloc):
     strloc = strloc.split(':')
