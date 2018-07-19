@@ -10,11 +10,8 @@
 <body>
   <!---------------------------------------------------------------------------------------------------------------------------------------->
   <div class="markdown_page">
-<<<<<<< HEAD
-    <p class="markdown_title">BotterLord <a href="https://travis-ci.org/Marchearth/botterlord"><img src="https://travis-ci.org/Marchearth/botterlord.svg?branch=master"></a></p>
-=======
->>>>>>> ec1703ee6372bb67b807003374f64a0a3596a11b
-    <p class="markdown_text">
+
+   <p class="markdown_text">
       <br> My personal side project that was inspired by *TIS-100, EmpireMud and Overlord Novels by Kugane Maruyama.* <br>
       <br> The plan is to create a DOS inspired retro castle management/strategy game where you personally will be responsible for the Npc's AIs, and hopefully a lot more.<br>
       <br> Mind that the screenshot is from the **old version**, in the new concept there won't be a map but instead of a realtime visual of the castle.<br>
